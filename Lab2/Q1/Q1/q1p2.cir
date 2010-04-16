@@ -1,0 +1,23 @@
+* C:\Users\Tiago\Documents\pspice\tcs530\Lab2\Q1\Q1\q1p2.sch
+
+* Schematics Version 8.0 - July 1997
+* Fri Apr 16 16:00:18 2010
+
+
+
+** Analysis setup **
+.tran/OP 20ns 0.048s SKIPBP
+.OP 
+
+
+* From [SCHEMATICS NETLIST] section of msim.ini:
+.lib nom.lib
+
+.INC "q1p2.net"
+.INC "q1p2.als"
+
+
+.probe
+
+
+.END
