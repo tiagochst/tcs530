@@ -1,0 +1,146 @@
+
+**** 04/16/110 16:00:18 ******** NT Evaluation PSpice (July 1997) ************
+
+ * C:\Users\Tiago\Documents\pspice\tcs530\Lab2\Q1\Q1\q1p2.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 8.0 - July 1997
+* Fri Apr 16 16:00:18 2010
+
+
+
+** Analysis setup **
+.tran/OP 20ns 0.048s SKIPBP
+.OP 
+
+
+* From [SCHEMATICS NETLIST] section of msim.ini:
+.lib nom.lib
+
+.INC "q1p2.net"
+
+**** INCLUDING q1p2.net ****
+* Schematics Netlist *
+
+
+
+V_V1         $N_0001 0 DC 0 AC 1
++SIN 0 10 60Hz 0 0 0
+R_R1         0 $N_0002  1941  
+D_D1         $N_0001 $N_0002 D1N4002 
+C_C1         0 $N_0002  40126.6n  
+
+**** RESUMING q1p2.cir ****
+.INC "q1p2.als"
+
+
+
+**** INCLUDING q1p2.als ****
+* Schematics Aliases *
+
+.ALIASES
+V_V1            V1(+=$N_0001 -=0 )
+R_R1            R1(1=0 2=$N_0002 )
+D_D1            D1(1=$N_0001 2=$N_0002 )
+C_C1            C1(1=0 2=$N_0002 )
+.ENDALIASES
+
+
+**** RESUMING q1p2.cir ****
+.probe
+
+
+.END
+
+**** 04/16/110 16:00:18 ******** NT Evaluation PSpice (July 1997) ************
+
+ * C:\Users\Tiago\Documents\pspice\tcs530\Lab2\Q1\Q1\q1p2.sch
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D1N4002         
+          IS   14.110000E-09 
+           N    1.984        
+         ISR  100.000000E-12 
+         IKF   94.81         
+          BV  100.1          
+         IBV   10            
+          RS     .03389      
+          TT    4.761000E-06 
+         CJO   51.170000E-12 
+          VJ     .3905       
+           M     .2762       
+
+
+**** 04/16/110 16:00:18 ******** NT Evaluation PSpice (July 1997) ************
+
+ * C:\Users\Tiago\Documents\pspice\tcs530\Lab2\Q1\Q1\q1p2.sch
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+($N_0001)    0.0000                   ($N_0002)-1.068E-21                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         5.503E-25
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/16/110 16:00:18 ******** NT Evaluation PSpice (July 1997) ************
+
+ * C:\Users\Tiago\Documents\pspice\tcs530\Lab2\Q1\Q1\q1p2.sch
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+
+**** DIODES
+
+
+NAME         D_D1      
+MODEL        D1N4002   
+ID           0.00E+00 
+VD           1.07E-21 
+REQ          3.61E+06 
+CAP          5.25E-11 
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .08
+

@@ -1,0 +1,403 @@
+#LyX 1.6.5 created this file. For more info see http://www.lyx.org/
+\lyxformat 345
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+% dá suporte para os termos na língua portuguesa do Brasil
+% Lê a codificação de fonte T1 (font encoding default é 0T1).
+\usepackage{ae}\usepackage{aecompl}\usepackage{pslatex}\usepackage{epsfig}\renewcommand{\sfdefault}{lmss}\renewcommand{\ttdefault}{lmtt}\usepackage[table]{xcolor}\usepackage{array}\usepackage{longtable}\usepackage{wrapfig}\numberwithin{table}{section}\numberwithin{figure}{section}\@ifundefined{definecolor}
+ {\usepackage{color}}{}
+
+
+
+\newcommand*{\titleTMB}{\begingroup
+\centering
+\settowidth{\unitlength}{\LARGE EE 530}
+\vspace*{\baselineskip}
+{\large\scshape EE530 }\\[\baselineskip]
+\rule{11.0cm}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt}
+\rule{11.0cm}{0.4pt}\\[\baselineskip]
+{\LARGE Segundo laboratório }\\[0.2\baselineskip]
+{\LARGE de eletrônica básica}\\[0.2\baselineskip]
+{\itshape Primeiro Semestre de 2010}\\[0.2\baselineskip]
+\rule{11.0cm}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt}
+\rule{11.0cm}{1.6pt}\\[\baselineskip]
+{\large\scshape Professor: Celso}\par
+\vfill
+{\normalsize   \scshape 
+
+\begin{center}
+\begin{tabular}{  l  l  p{5cm} }
+Tiago Chedraoui Silva      & RA: 082941\\ 
+\end{tabular}
+\end{center}
+
+\itshape \today }\\[\baselineskip]
+\vspace{3.2pt}
+\endgroup}
+\end_preamble
+\use_default_options false
+\language brazilian
+\inputencoding auto
+\font_roman ae
+\font_sans lmss
+\font_typewriter lmtt
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\paperfontsize 10
+\spacing single
+\use_hyperref false
+\papersize letterpaper
+\use_geometry false
+\use_amsmath 2
+\use_esint 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\author "" 
+\author "" 
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{titlepage}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+titleTMB
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{titlepage}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+\paragraph_spacing single
+O Retificador com Capacitor de Filtro - o Retificador de Pico
+\end_layout
+
+\begin_layout Standard
+Circuitos retificadores produzem uma tensão de saída pulsante (tensão variável),
+ o que os torna inadequados como fontes de alimentaçao cc para circuitos
+ eletrônicos.
+ O circuito retificador projetado (ver:figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Circuito-retificador"
+
+\end_inset
+
+) apresentou um pico de 10,0 volts aproximadamente de entrada, apesar de
+ existirem pequenas variações no valor de pico.
+ Devido às variações no pico da tensão de entrada , o pico da tensão no
+ resistor sofreu também pequenas variações, que iremos ignorar.
+ Assim, a tensão de saída varia de 0 a 9,3 Volts aproximadamente(ver:figura
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Análise-das-voltagens"
+
+\end_inset
+
+).
+ Portanto, a diferença entre a tensão na fonte e no resitor equivale a:
+\begin_inset Formula $V_{DO}=V_{Smax}-V_{0max}=0,7\, Volts$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Essa variação pode ser reduzida através da utilização de um capacitor em
+ paralelo com o o resistor de carga.
+\end_layout
+
+\begin_layout Standard
+Ao adicionarmos um capacitor em paralelo e se CR>>T,temos:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{equation}
+Vr=\frac{V_{p}}{fRC}\label{eq:1}\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+Sendo Vr a tensão de ondulação,Vp tensão de pico no resistor,f a frequência
+ da fonte,R a resistência em paralelo e C o capacitor em paralelo,R a resistênci
+a em paralelo e C o capacitor em paralelo.
+\end_layout
+
+\begin_layout Standard
+Utilizando os valores de f=60Hz,Vr=2V,R=1941 e Vp=9,3463 V, temos:C=40126,6
+ nF.
+\end_layout
+
+\begin_layout Standard
+Projetando o circuito (ver:figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Circuito-retificador-com"
+
+\end_inset
+
+) obtivemos a tensão de saída varindo de 7,8 a 9,3 Volts aproximadamente.
+ Diminuímos a variação na saída para 1,5V pico a pico,no entanto o objetivo
+ era que essa variação fosse de 2V.
+ O erro pode ter ocorrido por CR não ser muito maior que T, em nosso caso
+ 
+\begin_inset Formula $CR=4,67T$
+\end_inset
+
+ , ou seja a aproximação da equaçâo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:1"
+
+\end_inset
+
+ não é tão eficaz.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Q1/q1p2sq.pdf
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Circuito retificador
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Circuito-retificador"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Q1/q1p1.pdf
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Análise das voltagens em um retificador
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Análise-das-voltagens"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Q1/q1p1sq.pdf
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Circuito retificador com capacitor de filtro
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Circuito-retificador-com"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Q1/q1p2.pdf
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Análise das voltagens em circuito retificador com capacitor de filtro
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Análise-das-voltagens-1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+
+\color white
+s
+\end_layout
+
+\end_body
+\end_document
