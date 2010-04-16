@@ -305,7 +305,7 @@ name "fig:Análise-das-voltagens"
 
 \begin_layout Standard
 \begin_inset Float figure
-placement h
+placement H
 wide false
 sideways false
 status collapsed
@@ -340,6 +340,13 @@ name "fig:Circuito-retificador-com"
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
 \end_inset
 
 
@@ -395,11 +402,160 @@ name "fig:Análise-das-voltagens-1"
 
 \end_layout
 
-\begin_layout Standard
-\paragraph_spacing single
+\begin_layout Section
 
-\color white
-s
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Circuito dobrador de tensão
+\end_layout
+
+\begin_layout Standard
+Utilizando um grampeador (formado por C1 e D1) e um retificador de pico
+ (formado por C2 e D2), é possível obter uma tensão de saída duas vezes
+ maior que a entrada.
+ Os picos positivos são grampeados para 0 e o pico negativo para 
+\begin_inset Formula $-2V_{p},$
+\end_inset
+
+enquanto que o retificador de pico faz com que a saída seja quase uma tensão
+ cc de valor 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\lang english
+
+\begin_inset Formula $-2V_{p}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Assim, projetamos o circuito 
+\lang brazilian
+dobrador de tensão (ver:figura
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Circuito-dobrador-de"
+
+\end_inset
+
+ ) e realizando a análise do circuito (ver:figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Análise-de-tensão"
+
+\end_inset
+
+) percebe-se que a saída demora alguns cilcos para dobrar a tensão de entrada,
+ mas que após passa a atuar com pouca variação em relaçao ao esperado na
+ teoria, por exemplo, atingindo aproximadamente , 300ms após o inicío, o
+ valor de -19.7V no capacitor e resistor (variação relativa ao esperado de
+ 1,5%).
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Q3/Q3/q3sq.pdf
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Circuito dobrador de tensão 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Circuito-dobrador-de"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Q3/Q3/q3.pdf
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Análise de tensão do circuito
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Análise-de-tensão"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body
