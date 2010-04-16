@@ -185,8 +185,11 @@ a em paralelo e C o capacitor em paralelo.
 \end_layout
 
 \begin_layout Standard
-Utilizando os valores de f=60Hz,Vr=2V,R=1941 e Vp=9,3463 V, temos:C=40126,6
- nF.
+Utilizando os valores de 
+\begin_inset Formula $f=60Hz,\, V_{r}=2V\,,\, R=1941\Omega\,\, e\, V_{p}=9,3463V$
+\end_inset
+
+, temos : C = 40126,6 nF.
 \end_layout
 
 \begin_layout Standard
@@ -347,7 +350,7 @@ name "fig:Circuito-retificador-com"
 placement h
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
