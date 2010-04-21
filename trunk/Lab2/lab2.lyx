@@ -50,16 +50,19 @@ Tiago Chedraoui Silva      & RA: 082941\\
 \font_tt_scale 100
 
 \graphics default
+\float_placement h
 \paperfontsize 10
 \spacing single
 \use_hyperref false
 \papersize letterpaper
-\use_geometry false
+\use_geometry true
 \use_amsmath 2
 \use_esint 1
 \cite_engine basic
 \use_bibtopic false
 \paperorientation portrait
+\leftmargin 3cm
+\rightmargin 3cm
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation indent
@@ -403,6 +406,120 @@ name "fig:Análise-das-voltagens-1"
 \end_layout
 
 \begin_layout Section
+Retificador de precisão - super diodo
+\end_layout
+
+\begin_layout Standard
+Um retificador de precisão, também conhecido por super diodo, é obtido usando
+ um amplicador operacional de modo a obter um circuito se comportando como
+ um diodo ideal e retificardor (vide figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Circuito-retificador-precisão"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+Quanto a voltagem de entrada é negativa, há uma voltagem negativa no diodo
+ abrindo o circuito, portanto não há corrente na carga e a voltagem na saída
+ é zero.
+\end_layout
+
+\begin_layout Standard
+Quanto a voltagem de entrada é positiva, a voltagem é amplificada e o diodo
+ passa a atuar como um fio.Assim, existe corrente na carga e a voltagem na
+ saída é igual a na entrada devido à realimentação.
+\end_layout
+
+\begin_layout Standard
+Há um problema nessa configuração: quando a entrada torna-se negativa a
+ saida no amplificador pode tornar-se maior que a voltagem entrada no amplificad
+or,causando saturação.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Q2/Q2/q2sq.pdf
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Circuito retificador de precisão
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Circuito-retificador-precisão"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Q2/Q2/q2.pdf
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Análisede tensão por tempo na fonte e na saída
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Análise-super-diodo"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
@@ -522,7 +639,7 @@ name "fig:Circuito-dobrador-de"
 placement h
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
