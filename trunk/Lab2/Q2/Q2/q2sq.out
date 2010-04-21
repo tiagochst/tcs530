@@ -1,0 +1,314 @@
+
+**** 04/19/110 18:48:46 ******** NT Evaluation PSpice (July 1997) ************
+
+ * C:\Users\Tiago\Documents\pspice\tcs530\Lab2\Q2\Q2\q2sq.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 8.0 - July 1997
+* Mon Apr 19 18:48:46 2010
+
+
+
+** Analysis setup **
+.tran 20ns 0.05s
+.OP 
+
+
+* From [SCHEMATICS NETLIST] section of msim.ini:
+.lib nom.lib
+
+.INC "q2sq.net"
+
+**** INCLUDING q2sq.net ****
+* Schematics Netlist *
+
+
+
+R_R2         0 V0  1941  
+D_D2         Va V0 D1N4002 
+X_U1A         $N_0001 V0 V+ V- Va LM324
+V_V4         0 V- 15V
+V_V3         V+ 0 15V
+V_V2         $N_0001 0 DC 0 AC 1
++SIN 0 0.1 60Hz 0 0 0
+
+**** RESUMING q2sq.cir ****
+.INC "q2sq.als"
+
+
+
+**** INCLUDING q2sq.als ****
+* Schematics Aliases *
+
+.ALIASES
+R_R2            R2(1=0 2=V0 )
+D_D2            D2(1=Va 2=V0 )
+X_U1A           U1A(+=$N_0001 -=V0 V+=V+ V-=V- OUT=Va )
+V_V4            V4(+=0 -=V- )
+V_V3            V3(+=V+ -=0 )
+V_V2            V2(+=$N_0001 -=0 )
+_    _(V0=V0)
+_    _(Va=Va)
+_    _(V-=V-)
+_    _(V+=V+)
+.ENDALIASES
+
+
+**** RESUMING q2sq.cir ****
+.probe
+
+
+.END
+
+**** 04/19/110 18:48:46 ******** NT Evaluation PSpice (July 1997) ************
+
+ * C:\Users\Tiago\Documents\pspice\tcs530\Lab2\Q2\Q2\q2sq.sch
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D1N4002         X_U1A.dx        
+          IS   14.110000E-09  800.000000E-18 
+           N    1.984                        
+         ISR  100.000000E-12                 
+         IKF   94.81                         
+          BV  100.1                          
+         IBV   10                            
+          RS     .03389         1            
+          TT    4.761000E-06                 
+         CJO   51.170000E-12                 
+          VJ     .3905                       
+           M     .2762                       
+
+
+**** 04/19/110 18:48:46 ******** NT Evaluation PSpice (July 1997) ************
+
+ * C:\Users\Tiago\Documents\pspice\tcs530\Lab2\Q2\Q2\q2sq.sch
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1A.qx        
+               PNP             
+          IS  800.000000E-18 
+          BF  166.7          
+          NF    1            
+          BR    1            
+          NR    1            
+
+
+**** 04/19/110 18:48:46 ******** NT Evaluation PSpice (July 1997) ************
+
+ * C:\Users\Tiago\Documents\pspice\tcs530\Lab2\Q2\Q2\q2sq.sch
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   V+)   15.0000  (   V-)  -15.0000  (   V0) 59.05E-06  (   Va)  -14.7910      
+
+($N_0001)    0.0000                   (X_U1A.6)     .0047                       
+
+(X_U1A.7)  -14.8890                   (X_U1A.8)  -14.8890                       
+
+(X_U1A.9)    0.0000                   (X_U1A.10)     .6077                      
+
+(X_U1A.11)  -14.9600                  (X_U1A.12)  -14.9600                      
+
+(X_U1A.13)     .5938                  (X_U1A.14)     .5938                      
+
+(X_U1A.53)   13.5000                  (X_U1A.54)  -14.3500                      
+
+(X_U1A.90)   -1.9532                  (X_U1A.91)   40.0000                      
+
+(X_U1A.92)  -40.0000                  (X_U1A.99)    0.0000                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V4        -3.318E-03
+    V_V3        -3.318E-03
+    V_V2         4.487E-08
+    X_U1A.vb     4.733E-08
+    X_U1A.vc     2.829E-11
+    X_U1A.ve    -2.031E-08
+    X_U1A.vlim  -1.953E-03
+    X_U1A.vlp   -4.195E-11
+    X_U1A.vln   -3.805E-11
+
+    TOTAL POWER DISSIPATION   9.95E-02  WATTS
+
+
+**** 04/19/110 18:48:46 ******** NT Evaluation PSpice (July 1997) ************
+
+ * C:\Users\Tiago\Documents\pspice\tcs530\Lab2\Q2\Q2\q2sq.sch
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+
+**** VOLTAGE-CONTROLLED CURRENT SOURCES
+
+
+NAME         X_U1A.ga    X_U1A.gcm 
+I-SOURCE    -1.111E-08   3.623E-08
+
+
+**** VOLTAGE-CONTROLLED VOLTAGE SOURCES
+
+
+NAME         X_U1A.egnd
+V-SOURCE     0.000E+00
+I-SOURCE     1.953E-03
+
+
+**** CURRENT-CONTROLLED CURRENT SOURCES
+
+
+NAME         X_U1A.fb  
+I-SOURCE     5.975E-01
+
+
+**** CURRENT-CONTROLLED VOLTAGE SOURCES
+
+
+NAME         X_U1A.hlim
+V-SOURCE    -1.953E+00
+I-SOURCE     3.907E-12
+
+
+**** DIODES
+
+
+NAME         D_D2        X_U1A.dc    X_U1A.de    X_U1A.dlp   X_U1A.dln 
+MODEL        D1N4002     X_U1A.dx    X_U1A.dx    X_U1A.dx    X_U1A.dx  
+ID          -1.44E-08   -2.83E-11    2.03E-08   -4.20E-11   -3.80E-11 
+VD          -1.48E+01   -2.83E+01    4.41E-01   -4.20E+01   -3.80E+01 
+REQ          5.12E+11    1.00E+12    1.27E+06    1.00E+12    1.00E+12 
+CAP          1.86E-11    0.00E+00    0.00E+00    0.00E+00    0.00E+00 
+
+NAME         X_U1A.dp  
+MODEL        X_U1A.dx  
+ID          -3.00E-11 
+VD          -3.00E+01 
+REQ          1.00E+12 
+CAP          0.00E+00 
+
+
+**** BIPOLAR JUNCTION TRANSISTORS
+
+
+NAME         X_U1A.q1    X_U1A.q2  
+MODEL        X_U1A.qx    X_U1A.qx  
+IB          -4.48E-08   -4.49E-08 
+IC          -7.47E-06   -7.48E-06 
+VBE         -5.94E-01   -5.94E-01 
+VBC          1.50E+01    1.50E+01 
+VCE         -1.56E+01   -1.56E+01 
+BETADC       1.67E+02    1.67E+02 
+GM           2.89E-04    2.89E-04 
+RPI          5.77E+05    5.76E+05 
+RX           0.00E+00    0.00E+00 
+RO           1.00E+12    1.00E+12 
+CBE          0.00E+00    0.00E+00 
+CBC          0.00E+00    0.00E+00 
+CJS          0.00E+00    0.00E+00 
+BETAAC       1.67E+02    1.67E+02 
+CBX          0.00E+00    0.00E+00 
+FT           4.60E+15    4.60E+15 
+
+
+**** 04/19/110 18:48:46 ******** NT Evaluation PSpice (July 1997) ************
+
+ * C:\Users\Tiago\Documents\pspice\tcs530\Lab2\Q2\Q2\q2sq.sch
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   V+)   15.0000  (   V-)  -15.0000  (   V0) 59.05E-06  (   Va)  -14.7910      
+
+($N_0001)    0.0000                   (X_U1A.6)     .0047                       
+
+(X_U1A.7)  -14.7910                   (X_U1A.8)  -14.7910                       
+
+(X_U1A.9)    0.0000                   (X_U1A.10)     .6077                      
+
+(X_U1A.11)  -14.9600                  (X_U1A.12)  -14.9600                      
+
+(X_U1A.13)     .5938                  (X_U1A.14)     .5938                      
+
+(X_U1A.53)   13.5000                  (X_U1A.54)  -14.3500                      
+
+(X_U1A.90)-34.51E-06                  (X_U1A.91)   40.0000                      
+
+(X_U1A.92)  -40.0000                  (X_U1A.99)    0.0000                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V4        -3.318E-03
+    V_V3        -3.318E-03
+    V_V2         4.487E-08
+    X_U1A.vb     4.733E-08
+    X_U1A.vc     2.829E-11
+    X_U1A.ve    -2.061E-08
+    X_U1A.vlim  -3.451E-08
+    X_U1A.vlp   -4.000E-11
+    X_U1A.vln   -4.000E-11
+
+    TOTAL POWER DISSIPATION   9.95E-02  WATTS
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .17
+

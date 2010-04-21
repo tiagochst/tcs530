@@ -1,0 +1,11 @@
+* Schematics Netlist *
+
+
+
+R_R2         0 V0  1941  
+D_D2         Va V0 D1N4002 
+X_U1A         $N_0001 V0 V+ V- Va LM324
+V_V4         0 V- 15V
+V_V3         V+ 0 15V
+V_V2         $N_0001 0 DC 0 AC 1
++SIN 0 0.1 60Hz 0 0 0
