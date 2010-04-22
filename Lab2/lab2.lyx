@@ -410,9 +410,16 @@ Retificador de precisão - super diodo
 \end_layout
 
 \begin_layout Standard
-Um retificador de precisão, também conhecido por super diodo, é obtido usando
- um amplicador operacional de modo a obter um circuito se comportando como
- um diodo ideal e retificardor (vide figura 
+Um retificador de precisão, também conhecido por super diodo, é usado para
+ retificação de sinais AC de baixa amplitude, já que é capaz de retificar
+ um sinal sem as perdas inerentes aos retificadores convencionais a diodo.
+ 
+\end_layout
+
+\begin_layout Standard
+Ele pode ser obtido usando um amplicador operacional de modo a obter um
+ circuito se comportando como um diodo ideal e retificardor (vide figura
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Circuito-retificador-precisão"
@@ -420,24 +427,106 @@ reference "fig:Circuito-retificador-precisão"
 \end_inset
 
 ).
+ No circuito, o alto ganho do Amplificador operacional elimina o efeito
+ de 
+\begin_inset Formula $V_{d}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
 Quanto a voltagem de entrada é negativa, há uma voltagem negativa no diodo
  abrindo o circuito, portanto não há corrente na carga e a voltagem na saída
- é zero.
+ é zero.Quanto a voltagem de entrada é positiva, a voltagem é amplificada
+ e o diodo passa a atuar como um fio.
+ Assim, existe corrente na carga e a voltagem na saída é igual a na entrada
+ devido à realimentação.
 \end_layout
 
 \begin_layout Standard
-Quanto a voltagem de entrada é positiva, a voltagem é amplificada e o diodo
- passa a atuar como um fio.Assim, existe corrente na carga e a voltagem na
- saída é igual a na entrada devido à realimentação.
+Ou seja, sendo no circuito 
+\begin_inset Formula $V_{i}=V_{2}$
+\end_inset
+
+e 
+\begin_inset Formula $V_{a}=A.(V_{i}\text{–}V_{0})$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula \[
+Se\: V_{i}<0\text{\rightarrow}V_{0}=0\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula \[
+Se\: V_{i}>0\:\rightarrow V_{0}=A.(V_{i}\text{–}V_{0})\text{–}V_{d}\:\rightarrow V_{0}=\frac{(A.V_{i}\text{–}V_{d})}{(1+A)}\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-Há um problema nessa configuração: quando a entrada torna-se negativa a
- saida no amplificador pode tornar-se maior que a voltagem entrada no amplificad
-or,causando saturação.
+\begin_inset Formula \[
+Amp-op\::\: A\text{\ensuremath{\rightarrow\infty\rightarrow}}Vo=Vi\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Porém, como pode ser visto na figura: 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Análise-super-diodo"
+
+\end_inset
+
+ há o problema de oscilação do sinal de saída com essa configuração.
+ Isso acontece, pois quando o sinal de entrada passa a ser negativo não
+ há um feedback da voltagem amplificada, já que o diodo abre o circuito.
+ Outro problema relacionado à ausência do feedback consiste no módulo da
+ voltagem na saída do amplificador tornar-se maior que a voltagem na entrada,
+ 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\lang english
+já que 
+\begin_inset Formula $V_{a}=A.(V_{i}\text{–}V_{0})$
+\end_inset
+
+ e 
+\begin_inset Formula $|V_{i}|\text{>}|V_{0}|$
+\end_inset
+
+(ver figura:
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Q2Amp-op"
+
+\end_inset
+
+) e chegar a saturar o amp-op.
+ Posteriormente, quando o sinal de entrada torna-se positivo a saída do
+ amp-op levará um tempo, que é determinado pelo SR do amp-op, para voltar
+ ao valor 0 .
+ Esse problema pode ser visto para altas voltagens de entrada, que não é
+ o nosso caso.
 \end_layout
 
 \begin_layout Standard
@@ -451,7 +540,7 @@ status collapsed
 \align center
 \begin_inset Graphics
 	filename Q2/Q2/q2sq.pdf
-	scale 40
+	scale 30
 
 \end_inset
 
@@ -490,9 +579,10 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename Q2/Q2/q2.pdf
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -503,10 +593,52 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Análisede tensão por tempo na fonte e na saída
+Análise de tensão por tempo na fonte e na saída
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Análise-super-diodo"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Q2/Q2/amp-op.pdf
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Análise de tensão por tempo na saída do Amp-Op
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Q2Amp-op"
 
 \end_inset
 
@@ -542,8 +674,8 @@ Utilizando um grampeador (formado por C1 e D1) e um retificador de pico
 \begin_inset Formula $-2V_{p},$
 \end_inset
 
-enquanto que o retificador de pico faz com que a saída seja quase uma tensão
- cc de valor 
+ enquanto que o retificador de pico faz com que a saída seja quase uma tensão
+ CC de valor 
 \family roman
 \series medium
 \shape up
@@ -579,9 +711,9 @@ reference "fig:Análise-de-tensão"
 
 \end_inset
 
-) percebe-se que a saída demora alguns cilcos para dobrar a tensão de entrada,
- mas que após passa a atuar com pouca variação em relaçao ao esperado na
- teoria, por exemplo, atingindo aproximadamente , 300ms após o inicío, o
+) percebe-se que a saída demora alguns ciclos para dobrar a tensão de entrada,
+ mas que após passa a atuar com pouca variação em relação ao esperado na
+ teoria, por exemplo, atingindo aproximadamente, 300ms após o início, o
  valor de -19.7V no capacitor e resistor (variação relativa ao esperado de
  1,5%).
  

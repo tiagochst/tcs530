@@ -1,5 +1,5 @@
 
-**** 04/19/110 18:48:46 ******** NT Evaluation PSpice (July 1997) ************
+**** 04/21/110 21:42:23 ******** NT Evaluation PSpice (July 1997) ************
 
  * C:\Users\Tiago\Documents\pspice\tcs530\Lab2\Q2\Q2\q2sq.sch
 
@@ -13,7 +13,7 @@
 
 
 * Schematics Version 8.0 - July 1997
-* Mon Apr 19 18:48:46 2010
+* Wed Apr 21 21:42:22 2010
 
 
 
@@ -33,12 +33,12 @@
 
 
 R_R2         0 V0  1941  
-D_D2         Va V0 D1N4002 
-X_U1A         $N_0001 V0 V+ V- Va LM324
 V_V4         0 V- 15V
 V_V3         V+ 0 15V
 V_V2         $N_0001 0 DC 0 AC 1
 +SIN 0 0.1 60Hz 0 0 0
+D_D1         Va V0 D1N4002 
+X_U1A         $N_0001 V0 V+ V- Va LM324
 
 **** RESUMING q2sq.cir ****
 .INC "q2sq.als"
@@ -50,15 +50,15 @@ V_V2         $N_0001 0 DC 0 AC 1
 
 .ALIASES
 R_R2            R2(1=0 2=V0 )
-D_D2            D2(1=Va 2=V0 )
-X_U1A           U1A(+=$N_0001 -=V0 V+=V+ V-=V- OUT=Va )
 V_V4            V4(+=0 -=V- )
 V_V3            V3(+=V+ -=0 )
 V_V2            V2(+=$N_0001 -=0 )
+D_D1            D1(1=Va 2=V0 )
+X_U1A           U1A(+=$N_0001 -=V0 V+=V+ V-=V- OUT=Va )
 _    _(V0=V0)
 _    _(Va=Va)
-_    _(V-=V-)
 _    _(V+=V+)
+_    _(V-=V-)
 .ENDALIASES
 
 
@@ -68,7 +68,7 @@ _    _(V+=V+)
 
 .END
 
-**** 04/19/110 18:48:46 ******** NT Evaluation PSpice (July 1997) ************
+**** 04/21/110 21:42:23 ******** NT Evaluation PSpice (July 1997) ************
 
  * C:\Users\Tiago\Documents\pspice\tcs530\Lab2\Q2\Q2\q2sq.sch
 
@@ -95,7 +95,7 @@ _    _(V+=V+)
            M     .2762                       
 
 
-**** 04/19/110 18:48:46 ******** NT Evaluation PSpice (July 1997) ************
+**** 04/21/110 21:42:23 ******** NT Evaluation PSpice (July 1997) ************
 
  * C:\Users\Tiago\Documents\pspice\tcs530\Lab2\Q2\Q2\q2sq.sch
 
@@ -117,7 +117,7 @@ _    _(V+=V+)
           NR    1            
 
 
-**** 04/19/110 18:48:46 ******** NT Evaluation PSpice (July 1997) ************
+**** 04/21/110 21:42:23 ******** NT Evaluation PSpice (July 1997) ************
 
  * C:\Users\Tiago\Documents\pspice\tcs530\Lab2\Q2\Q2\q2sq.sch
 
@@ -169,7 +169,7 @@ _    _(V+=V+)
     TOTAL POWER DISSIPATION   9.95E-02  WATTS
 
 
-**** 04/19/110 18:48:46 ******** NT Evaluation PSpice (July 1997) ************
+**** 04/21/110 21:42:23 ******** NT Evaluation PSpice (July 1997) ************
 
  * C:\Users\Tiago\Documents\pspice\tcs530\Lab2\Q2\Q2\q2sq.sch
 
@@ -217,7 +217,7 @@ I-SOURCE     3.907E-12
 **** DIODES
 
 
-NAME         D_D2        X_U1A.dc    X_U1A.de    X_U1A.dlp   X_U1A.dln 
+NAME         D_D1        X_U1A.dc    X_U1A.de    X_U1A.dlp   X_U1A.dln 
 MODEL        D1N4002     X_U1A.dx    X_U1A.dx    X_U1A.dx    X_U1A.dx  
 ID          -1.44E-08   -2.83E-11    2.03E-08   -4.20E-11   -3.80E-11 
 VD          -1.48E+01   -2.83E+01    4.41E-01   -4.20E+01   -3.80E+01 
@@ -255,7 +255,7 @@ CBX          0.00E+00    0.00E+00
 FT           4.60E+15    4.60E+15 
 
 
-**** 04/19/110 18:48:46 ******** NT Evaluation PSpice (July 1997) ************
+**** 04/21/110 21:42:23 ******** NT Evaluation PSpice (July 1997) ************
 
  * C:\Users\Tiago\Documents\pspice\tcs530\Lab2\Q2\Q2\q2sq.sch
 
@@ -310,5 +310,5 @@ FT           4.60E+15    4.60E+15
 
           JOB CONCLUDED
 
-          TOTAL JOB TIME             .17
+          TOTAL JOB TIME             .45
 
