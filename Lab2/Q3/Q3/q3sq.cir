@@ -1,17 +1,19 @@
 * C:\Users\Tiago\Documents\pspice\tcs530\Lab2\Q3\Q3\q3sq.sch
 
-* Schematics Version 8.0 - July 1997
-* Fri Apr 16 17:01:00 2010
+* Schematics Version 9.1 - Web Update 1
+* Thu Apr 22 00:19:02 2010
 
 
 
 ** Analysis setup **
+.ac LIN 101 10 1.00K
 .tran 20ns 0.3s
 .OP 
 
 
-* From [SCHEMATICS NETLIST] section of msim.ini:
-.lib nom.lib
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+.lib "nom.lib"
 
 .INC "q3sq.net"
 .INC "q3sq.als"

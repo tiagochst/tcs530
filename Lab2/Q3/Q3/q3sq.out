@@ -1,5 +1,5 @@
-
-**** 04/16/110 17:01:01 ******** NT Evaluation PSpice (July 1997) ************
+
+**** 04/22/10 00:19:02 *********** Evaluation PSpice (Nov 1999) **************
 
  * C:\Users\Tiago\Documents\pspice\tcs530\Lab2\Q3\Q3\q3sq.sch
 
@@ -12,18 +12,20 @@
 
 
 
-* Schematics Version 8.0 - July 1997
-* Fri Apr 16 17:01:00 2010
+* Schematics Version 9.1 - Web Update 1
+* Thu Apr 22 00:19:02 2010
 
 
 
 ** Analysis setup **
+.ac LIN 101 10 1.00K
 .tran 20ns 0.3s
 .OP 
 
 
-* From [SCHEMATICS NETLIST] section of msim.ini:
-.lib nom.lib
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+.lib "nom.lib"
 
 .INC "q3sq.net"
 
@@ -62,8 +64,14 @@ _    _(Saida=Saida)
 
 
 .END
+
+WARNING -- File nom.ind is an index for nom.lib, not for nom.lib.
+(Library files in the same directory should not have the
+same name with different extensions.)
+Making new index file nom.ind for library file nom.lib
+Index has 374 entries from 3 file(s).
 
-**** 04/16/110 17:01:01 ******** NT Evaluation PSpice (July 1997) ************
+**** 04/22/10 00:19:02 *********** Evaluation PSpice (Nov 1999) **************
 
  * C:\Users\Tiago\Documents\pspice\tcs530\Lab2\Q3\Q3\q3sq.sch
 
@@ -90,7 +98,7 @@ _    _(Saida=Saida)
            M     .2762       
 
 
-**** 04/16/110 17:01:01 ******** NT Evaluation PSpice (July 1997) ************
+**** 04/22/10 00:19:02 *********** Evaluation PSpice (Nov 1999) **************
 
  * C:\Users\Tiago\Documents\pspice\tcs530\Lab2\Q3\Q3\q3sq.sch
 
@@ -118,7 +126,7 @@ _    _(Saida=Saida)
     TOTAL POWER DISSIPATION   0.00E+00  WATTS
 
 
-**** 04/16/110 17:01:01 ******** NT Evaluation PSpice (July 1997) ************
+**** 04/22/10 00:19:02 *********** Evaluation PSpice (Nov 1999) **************
 
  * C:\Users\Tiago\Documents\pspice\tcs530\Lab2\Q3\Q3\q3sq.sch
 
@@ -142,7 +150,7 @@ ID           2.40E-20    2.40E-20
 VD           8.67E-14    8.67E-14 
 REQ          3.61E+06    3.61E+06 
 CAP          5.25E-11    5.25E-11 
-**** 04/16/110 17:01:01 ******** NT Evaluation PSpice (July 1997) ************
+**** 04/22/10 00:19:02 *********** Evaluation PSpice (Nov 1999) **************
 
  * C:\Users\Tiago\Documents\pspice\tcs530\Lab2\Q3\Q3\q3sq.sch
 
@@ -173,5 +181,5 @@ CAP          5.25E-11    5.25E-11
 
           JOB CONCLUDED
 
-          TOTAL JOB TIME             .16
+          TOTAL JOB TIME             .23
 
