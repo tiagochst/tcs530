@@ -1,0 +1,274 @@
+%% LyX 1.6.5 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[10pt,english,brazil]{article}
+\usepackage{ae,aecompl}
+\renewcommand{\sfdefault}{lmss}
+\renewcommand{\ttdefault}{lmtt}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage[letterpaper]{geometry}
+\geometry{verbose,lmargin=3cm,rmargin=3cm}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{amssymb}
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+% dá suporte para os termos na língua portuguesa do Brasil
+% Lê a codificação de fonte T1 (font encoding default é 0T1).
+\usepackage{ae}\usepackage{aecompl}\usepackage{pslatex}\usepackage{epsfig}\renewcommand{\sfdefault}{lmss}\renewcommand{\ttdefault}{lmtt}\usepackage[table]{xcolor}\usepackage{array}\usepackage{longtable}\usepackage{wrapfig}\numberwithin{table}{section}\numberwithin{figure}{section}\@ifundefined{definecolor}
+ {\usepackage{color}}{}
+
+
+
+\newcommand*{\titleTMB}{\begingroup
+\centering
+\settowidth{\unitlength}{\LARGE EE 530}
+\vspace*{\baselineskip}
+{\large\scshape EE530 }\\[\baselineskip]
+\rule{11.0cm}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt}
+\rule{11.0cm}{0.4pt}\\[\baselineskip]
+{\LARGE Segundo laboratório }\\[0.2\baselineskip]
+{\LARGE de eletrônica básica}\\[0.2\baselineskip]
+{\itshape Primeiro Semestre de 2010}\\[0.2\baselineskip]
+\rule{11.0cm}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt}
+\rule{11.0cm}{1.6pt}\\[\baselineskip]
+{\large\scshape Professor: Celso}\par
+\vfill
+{\normalsize   \scshape 
+
+\begin{center}
+\begin{tabular}{  l  l  p{5cm} }
+Tiago Chedraoui Silva      & RA: 082941\\ 
+\end{tabular}
+\end{center}
+
+\itshape \today }\\[\baselineskip]
+\vspace{3.2pt}
+\endgroup}
+
+\makeatother
+
+\usepackage{babel}
+
+\begin{document}
+\begin{singlespace}
+\begin{titlepage} \titleTMB \end{titlepage} \newpage{}
+\end{singlespace}
+
+\begin{singlespace}
+
+\section{O Retificador com Capacitor de Filtro - o Retificador de Pico}
+\end{singlespace}
+
+Circuitos retificadores produzem uma tensão de saída pulsante (tensão
+variável), o que os torna inadequados como fontes de alimentaçao cc
+para circuitos eletrônicos. O circuito retificador projetado (ver:figura
+\ref{fig:Circuito-retificador}) apresentou um pico de 10,0 volts
+aproximadamente de entrada, apesar de existirem pequenas variações
+no valor de pico. Devido às variações no pico da tensão de entrada
+, o pico da tensão no resistor sofreu também pequenas variações, que
+iremos ignorar. Assim, a tensão de saída varia de 0 a 9,3 Volts aproximadamente(ver:figura
+\ref{fig:An=0000E1lise-das-voltagens}). Portanto, a diferença entre
+a tensão na fonte e no resitor equivale a:$V_{DO}=V_{Smax}-V_{0max}=0,7\, Volts$.
+
+Essa variação pode ser reduzida através da utilização de um capacitor
+em paralelo com o o resistor de carga.
+
+Ao adicionarmos um capacitor em paralelo e se CR>\textcompwordmark{}>T,temos:
+
+\begin{equation}
+Vr=\frac{V_{p}}{fRC}\label{eq:1}\end{equation}
+
+
+\begin{singlespace}
+Sendo Vr a tensão de ondulação,Vp tensão de pico no resistor,f a frequência
+da fonte,R a resistência em paralelo e C o capacitor em paralelo,R
+a resistência em paralelo e C o capacitor em paralelo.
+\end{singlespace}
+
+Utilizando os valores de $f=60Hz,\, V_{r}=2V\,,\, R=1941\Omega\,\, e\, V_{p}=9,3463V$,
+temos : C = 40126,6 nF.
+
+Projetando o circuito (ver:figura \ref{fig:Circuito-retificador-com})
+obtivemos a tensão de saída varindo de 7,8 a 9,3 Volts aproximadamente.
+Diminuímos a variação na saída para 1,5V pico a pico,no entanto o
+objetivo era que essa variação fosse de 2V. O erro pode ter ocorrido
+por CR não ser muito maior que T, em nosso caso $CR=4,67T$ , ou seja
+a aproximação da equaçâo \ref{eq:1} não é tão eficaz. 
+
+%
+\begin{figure}[h]
+\begin{centering}
+\includegraphics[scale=0.3]{Q1/q1p2sq}
+\par\end{centering}
+
+\caption{Circuito retificador\label{fig:Circuito-retificador}}
+
+\end{figure}
+
+
+%
+\begin{figure}[h]
+\begin{centering}
+\includegraphics[scale=0.5]{Q1/q1p1}
+\par\end{centering}
+
+\caption{Análise das voltagens em um retificador\label{fig:An=0000E1lise-das-voltagens}}
+
+\end{figure}
+
+
+%
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[scale=0.3]{Q1/q1p1sq}
+\par\end{centering}
+
+\caption{Circuito retificador com capacitor de filtro\label{fig:Circuito-retificador-com}}
+
+\end{figure}
+
+
+\newpage{}
+
+%
+\begin{figure}[h]
+\begin{centering}
+\includegraphics[scale=0.5]{Q1/q1p2}
+\par\end{centering}
+
+\caption{Análise das voltagens em circuito retificador com capacitor de filtro\label{fig:An=0000E1lise-das-voltagens-1}}
+
+\end{figure}
+
+
+\newpage{}
+
+
+\section{Retificador de precisão - super diodo}
+
+Um retificador de precisão, também conhecido por super diodo, é usado
+para retificação de sinais AC de baixa amplitude, já que é capaz de
+retificar um sinal sem as perdas inerentes aos retificadores convencionais
+a diodo. 
+
+Ele pode ser obtido usando um amplicador operacional de modo a obter
+um circuito se comportando como um diodo ideal e retificardor (vide
+figura \ref{fig:Circuito-retificador-precis=0000E3o}). No circuito,
+o alto ganho do Amplificador operacional elimina o efeito de $V_{d}$.
+
+Quanto a voltagem de entrada é negativa, há uma voltagem negativa
+no diodo abrindo o circuito, portanto não há corrente na carga e a
+voltagem na saída é zero.Quanto a voltagem de entrada é positiva,
+a voltagem é amplificada e o diodo passa a atuar como um fio. Assim,
+existe corrente na carga e a voltagem na saída é igual a na entrada
+devido à realimentação.
+
+Ou seja, sendo no circuito $V_{i}=V_{2}$e $V_{a}=A.(V_{i}\text{\textendash}V_{0})$:
+\begin{enumerate}
+\item \[
+Se\: V_{i}<0\text{\ensuremath{\rightarrow}}V_{0}=0\]
+
+\item \[
+Se\: V_{i}>0\:\rightarrow V_{0}=A.(V_{i}\text{\textendash}V_{0})\text{\textendash}V_{d}\:\rightarrow V_{0}=\frac{(A.V_{i}\text{\textendash}V_{d})}{(1+A)}\]
+
+\end{enumerate}
+\[
+Amp-op\::\: A\text{\ensuremath{\rightarrow\infty\rightarrow}}Vo=Vi\]
+
+
+Porém, como pode ser visto na figura: \ref{fig:An=0000E1lise-super-diodo}
+há o problema de oscilação do sinal de saída com essa configuração.
+Isso acontece, pois quando o sinal de entrada passa a ser negativo
+não há um feedback da voltagem amplificada, já que o diodo abre o
+circuito. Outro problema relacionado à ausência do feedback consiste
+no módulo da voltagem na saída do amplificador tornar-se maior que
+a voltagem na entrada, \foreignlanguage{english}{já que $V_{a}=A.(V_{i}\text{\textendash}V_{0})$
+e $|V_{i}|\text{>}|V_{0}|$(ver figura:\ref{fig:Q2Amp-op}) e chegar
+a saturar o amp-op. Posteriormente, quando o sinal de entrada torna-se
+positivo a saída do amp-op levará um tempo, que é determinado pelo
+SR do amp-op, para voltar ao valor 0 . Esse problema pode ser visto
+para altas voltagens de entrada, que não é o nosso caso.}
+
+%
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[scale=0.3]{Q2/Q2/q2sq}
+\par\end{centering}
+
+\caption{Circuito retificador de precisão\label{fig:Circuito-retificador-precis=0000E3o}}
+
+\end{figure}
+
+
+%
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[scale=0.4]{Q2/Q2/q2}
+\par\end{centering}
+
+\caption{Análise de tensão por tempo na fonte e na saída\label{fig:An=0000E1lise-super-diodo}}
+
+\end{figure}
+
+
+%
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[scale=0.4]{Q2/Q2/amp-op}
+\par\end{centering}
+
+\caption{Análise de tensão por tempo na saída do Amp-Op\label{fig:Q2Amp-op}}
+
+\end{figure}
+
+
+\newpage{}
+
+
+\section{Circuito dobrador de tensão}
+
+Utilizando um grampeador (formado por C1 e D1) e um retificador de
+pico (formado por C2 e D2), é possível obter uma tensão de saída duas
+vezes maior que a entrada. Os picos positivos são grampeados para
+0 e o pico negativo para $-2V_{p},$ enquanto que o retificador de
+pico faz com que a saída seja quase uma tensão CC de valor \foreignlanguage{english}{$-2V_{p}$.}
+
+\selectlanguage{english}%
+Assim, projetamos o circuito \foreignlanguage{brazil}{dobrador de
+tensão (ver:figura\ref{fig:Circuito-dobrador-de} ) e realizando a
+análise do circuito (ver:figura \ref{fig:An=0000E1lise-de-tens=0000E3o})
+percebe-se que a saída demora alguns ciclos para dobrar a tensão de
+entrada, mas que após passa a atuar com pouca variação em relação
+ao esperado na teoria, por exemplo, atingindo aproximadamente, 300ms
+após o início, o valor de -19.7V no capacitor e resistor (variação
+relativa ao esperado de 1,5\%). }
+
+\selectlanguage{brazil}%
+%
+\begin{figure}[h]
+\begin{centering}
+\includegraphics[scale=0.3]{Q3/Q3/q3sq}
+\par\end{centering}
+
+\caption{Circuito dobrador de tensão \label{fig:Circuito-dobrador-de}}
+
+
+
+\end{figure}
+
+
+\begin{center}
+%
+\begin{figure}[h]
+\includegraphics[scale=0.5]{Q3/Q3/q3}
+
+\caption{Análise de tensão do circuito\label{fig:An=0000E1lise-de-tens=0000E3o}}
+
+\end{figure}
+
+\par\end{center}
+\end{document}

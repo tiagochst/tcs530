@@ -1,4 +1,4 @@
-*version 8.0 106294714
+*version 9.1 519496846
 u 78
 V? 2
 R? 2
@@ -7,12 +7,18 @@ C? 4
 ? 4
 @libraries
 @analysis
+.AC 1 1 0
++0 101
++1 10
++2 1.00K
 .TRAN 1 0 0 0
 +0 20ns
 +1 0.3s
 @targets
 @attributes
 @translators
+a 0 u 13 0 0 0 hln 100 PSPICE=PSPICE
+a 0 u 13 0 0 0 hln 100 XILINX=XILINX
 a 0 u 13 0 0 0 hln 100 TANGO=PCB
 a 0 u 13 0 0 0 hln 100 SCICARDS=PCB
 a 0 u 13 0 0 0 hln 100 PROTEL=PCB
@@ -22,8 +28,6 @@ a 0 u 13 0 0 0 hln 100 PADS=PCB
 a 0 u 13 0 0 0 hln 100 ORCAD=PCB
 a 0 u 13 0 0 0 hln 100 EDIF=PCB
 a 0 u 13 0 0 0 hln 100 CADSTAR=PCB
-a 0 u 13 0 0 0 hln 100 PSPICE=PSPICE
-a 0 u 13 0 0 0 hln 100 XILINX=XILINX
 @setup
 unconnectedPins 0
 connectViaLabel 0
@@ -31,10 +35,10 @@ connectViaLocalLabels 0
 NoStim4ExtIFPortsWarnings 1
 AutoGenStim4ExtIFPorts 1
 @index
-pageloc 1 0 2639 
+pageloc 1 0 2703 
 @status
-n 0 110:03:16:17:01:00;1271448060 e 
-s 2832 110:03:16:17:01:01;1271448061 e 
+n 0 110:03:22:00:19:01;1271906341 e 
+s 2832 110:03:22:00:19:02;1271906342 e 
 *page 1 0 970 720 iA
 @ports
 port 31 GND_ANALOG 200 250 h
@@ -78,12 +82,14 @@ a 0 sp 11 0 33 5 hln 100 PART=D1N4002
 part 1 titleblk 970 720 h
 a 1 s 13 0 350 10 hcn 100 PAGESIZE=A
 a 1 s 13 0 180 60 hcn 100 PAGETITLE=
-a 1 s 13 0 300 95 hrn 100 PAGENO=1
 a 1 s 13 0 340 95 hrn 100 PAGECOUNT=1
+a 1 s 13 0 300 95 hrn 100 PAGENO=1
 part 73 nodeMarker 170 180 h
+a 0 s 0 0 0 0 hln 100 PROBEVAR=
 a 0 s 0 0 0 0 hln 100 PROBEVAR=
 a 0 a 0 0 4 22 hlb 100 LABEL=1
 part 74 nodeMarker 230 200 h
+a 0 s 0 0 0 0 hln 100 PROBEVAR=
 a 0 s 0 0 0 0 hln 100 PROBEVAR=
 a 0 a 0 0 4 22 hlb 100 LABEL=2
 @conn
