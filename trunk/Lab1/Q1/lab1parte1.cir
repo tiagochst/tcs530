@@ -1,0 +1,23 @@
+* C:\Users\Tiago\Desktop\ee530 lab1 resol\Q1\lab1parte1.sch
+
+* Schematics Version 8.0 - July 1997
+* Fri Apr 16 14:57:30 2010
+
+
+
+** Analysis setup **
+.tran/OP 20ns 1000ns SKIPBP
+.OP 
+
+
+* From [SCHEMATICS NETLIST] section of msim.ini:
+.lib nom.lib
+
+.INC "lab1parte1.net"
+.INC "lab1parte1.als"
+
+
+.probe
+
+
+.END

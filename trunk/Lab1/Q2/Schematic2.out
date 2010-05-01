@@ -1,0 +1,298 @@
+
+**** 03/21/110 22:02:37 ******** NT Evaluation PSpice (July 1997) ************
+
+ * C:\Users\Tiago\Documents\Schematic2.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 8.0 - July 1997
+* Sun Mar 21 22:02:36 2010
+
+
+
+** Analysis setup **
+.ac DEC 101 1 1000.00k
+.tran 20ns 2ms
+.OP 
+
+
+* From [SCHEMATICS NETLIST] section of msim.ini:
+.lib nom.lib
+
+.INC "Schematic2.net"
+
+**** INCLUDING Schematic2.net ****
+* Schematics Netlist *
+
+
+
+V_V1         $N_0001 0 DC 0 AC 1
++SIN 0 1 10000 0 0 0
+R_R1         $N_0001 $N_0002  1941  
+R_R2         $N_0002 Output  10941  
+X_U2A         0 $N_0002 vo vi Output LM324
+V_V5         vo 0 15
+V_V4         0 vi 15
+
+**** RESUMING Schematic2.cir ****
+.INC "Schematic2.als"
+
+
+
+**** INCLUDING Schematic2.als ****
+* Schematics Aliases *
+
+.ALIASES
+V_V1            V1(+=$N_0001 -=0 )
+R_R1            R1(1=$N_0001 2=$N_0002 )
+R_R2            R2(1=$N_0002 2=Output )
+X_U2A           U2A(+=0 -=$N_0002 V+=vo V-=vi OUT=Output )
+V_V5            V5(+=vo -=0 )
+V_V4            V4(+=0 -=vi )
+_    _(Output=Output)
+_    _(vo=vo)
+_    _(vi=vi)
+.ENDALIASES
+
+
+**** RESUMING Schematic2.cir ****
+.probe
+
+
+.END
+
+**** 03/21/110 22:02:37 ******** NT Evaluation PSpice (July 1997) ************
+
+ * C:\Users\Tiago\Documents\Schematic2.sch
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U2A.dx        
+          IS  800.000000E-18 
+          RS    1            
+
+
+**** 03/21/110 22:02:37 ******** NT Evaluation PSpice (July 1997) ************
+
+ * C:\Users\Tiago\Documents\Schematic2.sch
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U2A.qx        
+               PNP             
+          IS  800.000000E-18 
+          BF  166.7          
+          NF    1            
+          BR    1            
+          NR    1            
+
+
+**** 03/21/110 22:02:37 ******** NT Evaluation PSpice (July 1997) ************
+
+ * C:\Users\Tiago\Documents\Schematic2.sch
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   vi)  -15.0000  (   vo)   15.0000  (Output)    -.0018 ($N_0001)    0.0000    
+
+($N_0002)-192.5E-06                   (X_U2A.6) 255.4E-09                       
+
+(X_U2A.7)    -.0018                   (X_U2A.8)    -.0018                       
+
+(X_U2A.9)    0.0000                   (X_U2A.10)     .6076                      
+
+(X_U2A.11)  -14.9600                  (X_U2A.12)  -14.9600                      
+
+(X_U2A.13)     .5937                  (X_U2A.14)     .5937                      
+
+(X_U2A.53)   13.5000                  (X_U2A.54)  -14.3500                      
+
+(X_U2A.90)-144.1E-06                  (X_U2A.91)   40.0000                      
+
+(X_U2A.92)  -40.0000                  (X_U2A.99)    0.0000                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -9.917E-08
+    V_V5        -3.318E-03
+    V_V4        -3.318E-03
+    X_U2A.vb     2.554E-12
+    X_U2A.vc     1.350E-11
+    X_U2A.ve     1.435E-11
+    X_U2A.vlim  -1.441E-07
+    X_U2A.vlp   -4.000E-11
+    X_U2A.vln   -4.000E-11
+
+    TOTAL POWER DISSIPATION   9.95E-02  WATTS
+
+
+**** 03/21/110 22:02:37 ******** NT Evaluation PSpice (July 1997) ************
+
+ * C:\Users\Tiago\Documents\Schematic2.sch
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+
+**** VOLTAGE-CONTROLLED CURRENT SOURCES
+
+
+NAME         X_U2A.ga    X_U2A.gcm 
+I-SOURCE     3.622E-08   3.622E-08
+
+
+**** VOLTAGE-CONTROLLED VOLTAGE SOURCES
+
+
+NAME         X_U2A.egnd
+V-SOURCE     0.000E+00
+I-SOURCE     1.749E-07
+
+
+**** CURRENT-CONTROLLED CURRENT SOURCES
+
+
+NAME         X_U2A.fb  
+I-SOURCE     5.517E-05
+
+
+**** CURRENT-CONTROLLED VOLTAGE SOURCES
+
+
+NAME         X_U2A.hlim
+V-SOURCE    -1.441E-04
+I-SOURCE     2.882E-16
+
+
+**** DIODES
+
+
+NAME         X_U2A.dc    X_U2A.de    X_U2A.dlp   X_U2A.dln   X_U2A.dp  
+MODEL        X_U2A.dx    X_U2A.dx    X_U2A.dx    X_U2A.dx    X_U2A.dx  
+ID          -1.35E-11   -1.43E-11   -4.00E-11   -4.00E-11   -3.00E-11 
+VD          -1.35E+01   -1.43E+01   -4.00E+01   -4.00E+01   -3.00E+01 
+REQ          1.00E+12    1.00E+12    1.00E+12    1.00E+12    1.00E+12 
+CAP          0.00E+00    0.00E+00    0.00E+00    0.00E+00    0.00E+00 
+
+
+**** BIPOLAR JUNCTION TRANSISTORS
+
+
+NAME         X_U2A.q1    X_U2A.q2  
+MODEL        X_U2A.qx    X_U2A.qx  
+IB          -4.49E-08   -4.47E-08 
+IC          -7.50E-06   -7.46E-06 
+VBE         -5.94E-01   -5.94E-01 
+VBC          1.50E+01    1.50E+01 
+VCE         -1.56E+01   -1.56E+01 
+BETADC       1.67E+02    1.67E+02 
+GM           2.90E-04    2.88E-04 
+RPI          5.75E+05    5.78E+05 
+RX           0.00E+00    0.00E+00 
+RO           1.00E+12    1.00E+12 
+CBE          0.00E+00    0.00E+00 
+CBC          0.00E+00    0.00E+00 
+CJS          0.00E+00    0.00E+00 
+BETAAC       1.67E+02    1.67E+02 
+CBX          0.00E+00    0.00E+00 
+FT           4.61E+15    4.59E+15 
+
+
+**** 03/21/110 22:02:37 ******** NT Evaluation PSpice (July 1997) ************
+
+ * C:\Users\Tiago\Documents\Schematic2.sch
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   vi)  -15.0000  (   vo)   15.0000  (Output)    -.0018 ($N_0001)    0.0000    
+
+($N_0002)-192.5E-06                   (X_U2A.6) 255.4E-09                       
+
+(X_U2A.7)    -.0018                   (X_U2A.8)    -.0018                       
+
+(X_U2A.9)    0.0000                   (X_U2A.10)     .6076                      
+
+(X_U2A.11)  -14.9600                  (X_U2A.12)  -14.9600                      
+
+(X_U2A.13)     .5937                  (X_U2A.14)     .5937                      
+
+(X_U2A.53)   13.5000                  (X_U2A.54)  -14.3500                      
+
+(X_U2A.90)-144.1E-06                  (X_U2A.91)   40.0000                      
+
+(X_U2A.92)  -40.0000                  (X_U2A.99)    0.0000                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -9.917E-08
+    V_V5        -3.318E-03
+    V_V4        -3.318E-03
+    X_U2A.vb     2.555E-12
+    X_U2A.vc     1.350E-11
+    X_U2A.ve     1.435E-11
+    X_U2A.vlim  -1.441E-07
+    X_U2A.vlp   -4.000E-11
+    X_U2A.vln   -4.000E-11
+
+    TOTAL POWER DISSIPATION   9.95E-02  WATTS
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .22
+

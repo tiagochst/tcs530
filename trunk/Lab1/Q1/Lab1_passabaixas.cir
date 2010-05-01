@@ -1,0 +1,25 @@
+* C:\Users\Tiago\Desktop\ee530 lab1 resol\Q1\Lab1_passabaixas.sch
+
+* Schematics Version 8.0 - July 1997
+* Sat Mar 27 16:55:17 2010
+
+
+
+** Analysis setup **
+.ac DEC 101 100 100.00K
+.DC DEC V_V3 1 10000 1 
+.tran 20ns 20ms
+.STMLIB "Lab1_passabaixas.stl"
+
+
+* From [SCHEMATICS NETLIST] section of msim.ini:
+.lib nom.lib
+
+.INC "Lab1_passabaixas.net"
+.INC "Lab1_passabaixas.als"
+
+
+.probe
+
+
+.END

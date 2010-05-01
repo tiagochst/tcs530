@@ -1,0 +1,8 @@
+* Schematics Netlist *
+
+
+
+D_D1         $N_0001 V0p D1N4002 
+R_R1         V0n V0p  1941  
+V_V1         $N_0001 V0n DC 0 AC 1
++SIN 0 10 60Hz 0 0 0
