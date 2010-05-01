@@ -1,0 +1,124 @@
+
+**** 03/27/110 16:55:17 ******** NT Evaluation PSpice (July 1997) ************
+
+ * C:\Users\Tiago\Desktop\ee530 lab1 resol\Q1\Lab1_passabaixas.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 8.0 - July 1997
+* Sat Mar 27 16:55:17 2010
+
+
+
+** Analysis setup **
+.ac DEC 101 100 100.00K
+.DC DEC V_V3 1 10000 1 
+.tran 20ns 20ms
+.STMLIB "Lab1_passabaixas.stl"
+
+
+* From [SCHEMATICS NETLIST] section of msim.ini:
+.lib nom.lib
+
+.INC "Lab1_passabaixas.net"
+
+**** INCLUDING Lab1_passabaixas.net ****
+* Schematics Netlist *
+
+
+
+C_C2         0 output  100n  
+R_R2         $N_0001 output  1941  
+V_V3         $N_0001 0 DC 0 AC 1
++SIN 0 1 1000 0 0 0
+
+**** RESUMING Lab1_passabaixas.cir ****
+.INC "Lab1_passabaixas.als"
+
+
+
+**** INCLUDING Lab1_passabaixas.als ****
+* Schematics Aliases *
+
+.ALIASES
+C_C2            C2(1=0 2=output )
+R_R2            R2(1=$N_0001 2=output )
+V_V3            V3(+=$N_0001 -=0 )
+_    _(output=output)
+.ENDALIASES
+
+
+**** RESUMING Lab1_passabaixas.cir ****
+.probe
+
+
+.END
+
+**** 03/27/110 16:55:17 ******** NT Evaluation PSpice (July 1997) ************
+
+ * C:\Users\Tiago\Desktop\ee530 lab1 resol\Q1\Lab1_passabaixas.sch
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(output)    0.0000 ($N_0001)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V3         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 03/27/110 16:55:17 ******** NT Evaluation PSpice (July 1997) ************
+
+ * C:\Users\Tiago\Desktop\ee530 lab1 resol\Q1\Lab1_passabaixas.sch
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(output)    0.0000 ($N_0001)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V3         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .06
+

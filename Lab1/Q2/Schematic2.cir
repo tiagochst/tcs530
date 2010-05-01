@@ -1,0 +1,24 @@
+* C:\Users\Tiago\Documents\Schematic2.sch
+
+* Schematics Version 8.0 - July 1997
+* Sun Mar 21 22:02:36 2010
+
+
+
+** Analysis setup **
+.ac DEC 101 1 1000.00k
+.tran 20ns 2ms
+.OP 
+
+
+* From [SCHEMATICS NETLIST] section of msim.ini:
+.lib nom.lib
+
+.INC "Schematic2.net"
+.INC "Schematic2.als"
+
+
+.probe
+
+
+.END

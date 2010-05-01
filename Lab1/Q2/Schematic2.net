@@ -1,0 +1,11 @@
+* Schematics Netlist *
+
+
+
+V_V1         $N_0001 0 DC 0 AC 1
++SIN 0 1 10000 0 0 0
+R_R1         $N_0001 $N_0002  1941  
+R_R2         $N_0002 Output  10941  
+X_U2A         0 $N_0002 vo vi Output LM324
+V_V5         vo 0 15
+V_V4         0 vi 15

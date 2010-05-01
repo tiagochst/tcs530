@@ -1,0 +1,65 @@
+
+**** 04/16/110 14:57:30 ******** NT Evaluation PSpice (July 1997) ************
+
+ * C:\Users\Tiago\Desktop\ee530 lab1 resol\Q1\lab1parte1.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 8.0 - July 1997
+* Fri Apr 16 14:57:30 2010
+
+
+
+** Analysis setup **
+.tran/OP 20ns 1000ns SKIPBP
+.OP 
+
+
+* From [SCHEMATICS NETLIST] section of msim.ini:
+.lib nom.lib
+
+.INC "lab1parte1.net"
+
+**** INCLUDING lab1parte1.net ****
+* Schematics Netlist *
+
+
+
+D_D1         $N_0001 V0p D1N4002 
+R_R1         V0n V0p  1941  
+V_V1         $N_0001 V0n DC 0 AC 1
++SIN 0 10 60Hz 0 0 0
+
+**** RESUMING lab1parte1.cir ****
+.INC "lab1parte1.als"
+
+
+
+**** INCLUDING lab1parte1.als ****
+* Schematics Aliases *
+
+.ALIASES
+D_D1            D1(1=$N_0001 2=V0p )
+R_R1            R1(1=V0n 2=V0p )
+V_V1            V1(+=$N_0001 -=V0n )
+_    _(V0p=V0p)
+_    _(V0n=V0n)
+.ENDALIASES
+
+
+**** RESUMING lab1parte1.cir ****
+.probe
+
+
+.END
+
+ERROR -- Node $N_0001 is floating
+ERROR -- Node V0p is floating
+ERROR -- Node V0n is floating
