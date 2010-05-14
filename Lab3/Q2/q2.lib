@@ -1,0 +1,2 @@
+.MODEL MbreakN3  NMOS( VTO=1.941 KP=100u L=10u W=100u LAMBDA=0.01) 
+*$

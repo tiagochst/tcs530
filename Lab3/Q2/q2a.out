@@ -1,0 +1,199 @@
+
+**** 05/14/110 11:55:59 ******** NT Evaluation PSpice (July 1997) ************
+
+ * C:\Users\Tiago\Desktop\EE530\pspice\tcs530\Lab3\Q2\q2a.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 8.0 - July 1997
+* Fri May 14 11:55:59 2010
+
+
+
+** Analysis setup **
+.ac DEC 101 100 100000k
+.tran/OP 20ns 10ms SKIPBP
+.OP 
+.LIB "C:\Users\Tiago\Desktop\EE530\pspice\tcs530\Lab3\Q2\q2.lib"
+
+
+* From [SCHEMATICS NETLIST] section of msim.ini:
+.lib nom.lib
+
+.INC "q2a.net"
+
+**** INCLUDING q2a.net ****
+* Schematics Netlist *
+
+
+
+C_Cc1         $N_0001 $N_0002  100n  
+C_Cc2         $N_0003 Vo  100n  
+C_Cs         0 $N_0004  100n  
+R_RG         0 $N_0002  1000k  
+R_RD         $N_0003 VDD  3091.2  
+M_M1         $N_0003 $N_0002 $N_0004 $N_0004 MbreakN           
+V_V3         0 VSS 10V
+V_V2         VDD 0 10V
+I_I1         $N_0004 VSS DC 0.001941A  
+R_RL         0 Vo  100k  
+R_Rsig         $N_0005 $N_0001  100  
+V_Vsig         $N_0005 0 DC 0 AC 1
++SIN 0 0.1 1000 0 0 0
+
+**** RESUMING q2a.cir ****
+.INC "q2a.als"
+
+
+
+**** INCLUDING q2a.als ****
+* Schematics Aliases *
+
+.ALIASES
+C_Cc1           Cc1(1=$N_0001 2=$N_0002 )
+C_Cc2           Cc2(1=$N_0003 2=Vo )
+C_Cs            Cs(1=0 2=$N_0004 )
+R_RG            RG(1=0 2=$N_0002 )
+R_RD            RD(1=$N_0003 2=VDD )
+M_M1            M1(d=$N_0003 g=$N_0002 s=$N_0004 s=$N_0004 )
+V_V3            V3(+=0 -=VSS )
+V_V2            V2(+=VDD -=0 )
+I_I1            I1(+=$N_0004 -=VSS )
+R_RL            RL(1=0 2=Vo )
+R_Rsig          Rsig(1=$N_0005 2=$N_0001 )
+V_Vsig          Vsig(+=$N_0005 -=0 )
+_    _(Vo=Vo)
+_    _(VDD=VDD)
+_    _(VSS=VSS)
+.ENDALIASES
+
+
+**** RESUMING q2a.cir ****
+.probe
+
+
+.END
+
+**** 05/14/110 11:55:59 ******** NT Evaluation PSpice (July 1997) ************
+
+ * C:\Users\Tiago\Desktop\EE530\pspice\tcs530\Lab3\Q2\q2a.sch
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               MbreakN         
+               NMOS            
+       LEVEL    1            
+           L  100.000000E-06 
+           W  100.000000E-06 
+         VTO    0            
+          KP   20.000000E-06 
+       GAMMA    0            
+         PHI     .6          
+          IS   10.000000E-15 
+          JS    0            
+          PB     .8          
+        PBSW     .8          
+          CJ    0            
+        CJSW    0            
+        CGSO    0            
+        CGDO    0            
+         TOX    0            
+          XJ    0            
+      DIOMOD    1            
+         VFB    0            
+          U0    0            
+        TEMP    0            
+         VDD    0            
+       XPART    0            
+
+
+**** 05/14/110 11:55:59 ******** NT Evaluation PSpice (July 1997) ************
+
+ * C:\Users\Tiago\Desktop\EE530\pspice\tcs530\Lab3\Q2\q2a.sch
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   Vo)    0.0000  (  VDD)   10.0000  (  VSS)  -10.0000  ($N_0001)    0.0000    
+
+($N_0002)    0.0000                   ($N_0003)    4.0000                       
+
+($N_0004)  -13.9320                   ($N_0005)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V3        -1.941E-03
+    V_V2        -1.941E-03
+    V_Vsig       0.000E+00
+
+    TOTAL POWER DISSIPATION   3.88E-02  WATTS
+
+
+**** 05/14/110 11:55:59 ******** NT Evaluation PSpice (July 1997) ************
+
+ * C:\Users\Tiago\Desktop\EE530\pspice\tcs530\Lab3\Q2\q2a.sch
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+
+**** MOSFETS
+
+
+NAME         M_M1      
+MODEL        MbreakN   
+ID           1.94E-03 
+VGS          1.39E+01 
+VDS          1.79E+01 
+VBS          0.00E+00 
+VTH          0.00E+00 
+VDSAT        1.39E+01 
+GM           2.79E-04 
+GDS          0.00E+00 
+GMB          0.00E+00 
+CBD          0.00E+00 
+CBS          0.00E+00 
+CGSOV        0.00E+00 
+CGDOV        0.00E+00 
+CGBOV        0.00E+00 
+CGS          0.00E+00 
+CGD          0.00E+00 
+CGB          0.00E+00 
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .19
+
