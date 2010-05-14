@@ -1,0 +1,25 @@
+* C:\Users\Tiago\Desktop\EE530\pspice\tcs530\Lab3\Q1\q1.sch
+
+* Schematics Version 8.0 - July 1997
+* Fri May 14 00:35:52 2010
+
+
+
+** Analysis setup **
+.DC LIN V_V2 0 10 0.1 
++ LIN V_V1 1.941 3.941 0.5 
+.OP 
+.LIB "C:\Users\Tiago\Desktop\EE530\pspice\tcs530\Lab3\Q1\q1.lib"
+
+
+* From [SCHEMATICS NETLIST] section of msim.ini:
+.lib nom.lib
+
+.INC "q1.net"
+.INC "q1.als"
+
+
+.probe
+
+
+.END
