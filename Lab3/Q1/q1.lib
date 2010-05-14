@@ -1,0 +1,16 @@
+.model MbreakN-X NMOS( VTO=0.942 KP=100u L=10u W=100u LAMBDA=0.01) 
+*$
++ vto = Vt W =100u L =10u kp =100u lambda =0.01 
+.model MbreakN-X1 NMOS1 vto = 0,942 W =100u L =10u kp =100u lambda =0.01 
+*$
+.model NMOS1 NMOS( VTO=0.942 KP=100u L=10u W=100u LAMBDA=0.01) 
+*$
++ vto = 0,942 W =100u L =10u kp =100u lambda =0.01 
+.model MbreakN-X2 NMOS Vto=0.942 kp=100u L=10u W=100u lambda =0.01 
+*$
+.model MbreakN-X3 NMOS( VTO=0.942 KP=100u L=10u W=100u LAMBDA=0.01) 
+*$
+.MODEL MbreakN3  NMOS( VTO=1.941 KP=100u L=10u W=100u LAMBDA=0.01) 
+*$
+.MODEL CMOSN  NMOS( VTO=1.942 KP=100u L=10u W=100u LAMBDA=0.01) 
+*$
