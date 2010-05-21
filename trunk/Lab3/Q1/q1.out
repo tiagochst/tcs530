@@ -1,5 +1,5 @@
 
-**** 05/14/110 00:39:18 ******** NT Evaluation PSpice (July 1997) ************
+**** 05/21/110 10:32:12 ******** NT Evaluation PSpice (July 1997) ************
 
  * C:\Users\Tiago\Desktop\EE530\pspice\tcs530\Lab3\Q1\q1.sch
 
@@ -61,7 +61,7 @@ _    _(VD=VD)
 
 .END
 
-**** 05/14/110 00:39:18 ******** NT Evaluation PSpice (July 1997) ************
+**** 05/21/110 10:32:12 ******** NT Evaluation PSpice (July 1997) ************
 
  * C:\Users\Tiago\Desktop\EE530\pspice\tcs530\Lab3\Q1\q1.sch
 
@@ -102,7 +102,7 @@ _    _(VD=VD)
        XPART    0            
 
 
-**** 05/14/110 00:39:18 ******** NT Evaluation PSpice (July 1997) ************
+**** 05/21/110 10:32:12 ******** NT Evaluation PSpice (July 1997) ************
 
  * C:\Users\Tiago\Desktop\EE530\pspice\tcs530\Lab3\Q1\q1.sch
 
@@ -131,7 +131,7 @@ _    _(VD=VD)
     TOTAL POWER DISSIPATION   0.00E+00  WATTS
 
 
-**** 05/14/110 00:39:18 ******** NT Evaluation PSpice (July 1997) ************
+**** 05/21/110 10:32:12 ******** NT Evaluation PSpice (July 1997) ************
 
  * C:\Users\Tiago\Desktop\EE530\pspice\tcs530\Lab3\Q1\q1.sch
 
@@ -171,5 +171,5 @@ CGB          0.00E+00
 
           JOB CONCLUDED
 
-          TOTAL JOB TIME             .13
+          TOTAL JOB TIME             .14
 
