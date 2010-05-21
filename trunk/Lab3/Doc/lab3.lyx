@@ -50,7 +50,7 @@ Tiago Chedraoui Silva      & RA: 082941\\
 \font_tt_scale 100
 
 \graphics default
-\float_placement h
+\float_placement H
 \paperfontsize 10
 \spacing single
 \use_hyperref false
@@ -627,7 +627,7 @@ name "fig:Aproximação-da-curva"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -684,7 +684,395 @@ Retificador de precisão - super diodo
 \end_layout
 
 \begin_layout Section
-Circuito dobrador de tensão
+Inversor lógico digital CMOSm 
+\end_layout
+
+\begin_layout Standard
+O inversor básico utiliza dois transistores MOSFETS (ver figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Circuito-inversor-lógico"
+
+\end_inset
+
+) sendo um com um canal n e outro com canal p, o corpo de cada dispositivo
+ está conectado à sua fonte, assim nenhum efeito de corpo será considerado.
+\end_layout
+
+\begin_layout Standard
+Devemos considerar que quando Vi estiver em nivel lógico 0 o circuito atuará
+ conforme a figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Sinal-de-entrada-baixo"
+
+\end_inset
+
+ e quando estiver em nível lógico 1 atuará conforme a figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Sinal-de-entrada-alto"
+
+\end_inset
+
+.
+ Ou seja, quando a entrada for 0V a saída será 
+\begin_inset Formula $V_{DD}$
+\end_inset
+
+ e quando a entrada for 
+\begin_inset Formula $V_{DD}$
+\end_inset
+
+V a saída será 0.
+\end_layout
+
+\begin_layout Standard
+O nosso circuito confirma tal caracteristica pelo gráfico 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Voltagem-de-saída-alra-baixa"
+
+\end_inset
+
+, no qual apresenta valor 
+\begin_inset Formula $V_{DD}$
+\end_inset
+
+ quando a entrada é zero, e 0 quando a entrada é 
+\begin_inset Formula $V_{DD}$
+\end_inset
+
+ .
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename q3csch.pdf
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Circuito inversor lógico
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Circuito-inversor-lógico"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename q3b.jpg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Sinal de entrada baixo
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Sinal-de-entrada-baixo"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename q3a.jpg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Sinal de entrada alto
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Sinal-de-entrada-alto"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename q3arefeita.pdf
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Voltagem de saída para transição de entrada alta para baixa.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Voltagem-de-saída-alra-baixa"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Quando o inversor é chaveado, flui corrente pela associação em série dos
+ transistores CMOS (vide figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Corrente-na-bateira"
+
+\end_inset
+
+).O pico da figura ocorre quando 
+\begin_inset Formula $V_{th}=v_{i}=v_{o}=\frac{V_{dd}}{2}$
+\end_inset
+
+.Tal corrente gera dissipação de potência.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename q3corrente.pdf
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Corrente na bateira enquanto variação na tensão de entrada
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Corrente-na-bateira"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename q3cv0.pdf
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Tensão de saída do circuito
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Tensão-de-saída"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename q3cvi.pdf
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Tensão de entrada do circuito
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Tensão-de-entrada"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body
