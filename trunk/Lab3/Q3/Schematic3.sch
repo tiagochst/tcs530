@@ -1,9 +1,9 @@
-*version 8.0 388814369
-u 90
+*version 8.0 1374131452
+u 92
 M? 5
 V? 3
 ? 6
-C? 2
+C? 3
 @libraries
 @analysis
 .AC 0 1 0
@@ -15,7 +15,7 @@ C? 2
 + 0 4 5V
 + 0 5 0V
 + 0 6 -50mV
-.TRAN 1 1 0 0
+.TRAN 1 1 1 0
 +0 2ns
 +1 20ms
 .LIB C:\Users\Tiago\Desktop\EE530\pspice\tcs530\Lab3\Q1\q1.lib
@@ -41,10 +41,10 @@ connectViaLocalLabels 0
 NoStim4ExtIFPortsWarnings 1
 AutoGenStim4ExtIFPorts 1
 @index
-pageloc 1 0 2851 
+pageloc 1 0 3254 
 @status
-n 0 110:04:21:13:10:41;1274458241 e 
-s 2832 110:04:21:13:12:08;1274458328 e 
+n 0 110:04:21:15:57:52;1274468272 e 
+s 2832 110:04:21:15:57:52;1274468272 e 
 *page 1 0 970 720 iA
 @ports
 port 17 BUBBLE 260 220 v
@@ -60,6 +60,7 @@ port 6 BUBBLE 370 210 d
 a 1 x 3 0 0 0 hcn 100 LABEL=Vo
 port 24 BUBBLE 220 180 h
 a 1 x 3 0 0 0 hcn 100 LABEL=Vi
+port 91 GND_EARTH 370 250 h
 @parts
 part 31 VDC 390 150 h
 a 1 u 13 0 -11 24 hcn 100 DC=5V
@@ -86,18 +87,28 @@ part 48 MbreakP3 320 180 U
 a 0 a 0:13 0 0 0 hln 100 PKGREF=M4
 a 0 ap 9 0 5 10 hln 100 REFDES=M4
 a 0 sp 13 0 -14 40 hln 100 MODEL=Pmos
+part 90 C 370 250 v
+a 0 sp 0 0 0 10 hlb 100 PART=C
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=CK05
+a 0 s 0:13 0 0 0 hln 100 GATE=
+a 0 a 0:13 0 0 0 hln 100 PKGREF=C2
+a 0 u 13 0 13 53 hln 100 VALUE=1.941n
+a 0 ap 9 0 -3 42 hln 100 REFDES=C2
 part 1 titleblk 970 720 h
 a 1 s 13 0 350 10 hcn 100 PAGESIZE=A
 a 1 s 13 0 180 60 hcn 100 PAGETITLE=
-a 1 s 13 0 300 95 hrn 100 PAGENO=1
 a 1 s 13 0 340 95 hrn 100 PAGECOUNT=1
+a 1 s 13 0 300 95 hrn 100 PAGENO=1
 part 82 nodeMarker 370 210 h
+a 0 s 0 0 0 0 hln 100 PROBEVAR=
 a 0 s 0 0 0 0 hln 100 PROBEVAR=
 a 0 a 0 0 4 22 hlb 100 LABEL=3
 part 83 nodeMarker 220 180 h
 a 0 s 0 0 0 0 hln 100 PROBEVAR=
+a 0 s 0 0 0 0 hln 100 PROBEVAR=
 a 0 a 0 0 4 22 hlb 100 LABEL=4
 part 89 iMarker 350 160 h
+a 0 s 0 0 0 0 hln 100 PROBEVAR=
 a 0 s 0 0 0 0 hln 100 PROBEVAR=
 a 0 a 0 0 6 20 hlb 100 LABEL=5
 @conn
@@ -191,6 +202,12 @@ j 350 160
 j 350 160
 + p 89 pin1
 + w 61
+j 370 220
++ p 90 2
++ w 5
+j 370 250
++ s 91
++ p 90 1
 @attributes
 a 0 s 0:13 0 0 0 hln 100 PAGETITLE=
 a 0 s 0:13 0 0 0 hln 100 PAGENO=1

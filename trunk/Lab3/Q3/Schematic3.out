@@ -1,5 +1,5 @@
 
-**** 05/21/110 13:12:08 ******** NT Evaluation PSpice (July 1997) ************
+**** 05/21/110 15:57:53 ******** NT Evaluation PSpice (July 1997) ************
 
  * C:\Users\Tiago\Desktop\EE530\pspice\tcs530\Lab3\Q3\Schematic3.sch
 
@@ -13,13 +13,13 @@
 
 
 * Schematics Version 8.0 - July 1997
-* Fri May 21 13:10:41 2010
+* Fri May 21 15:57:52 2010
 
 
 
 ** Analysis setup **
 .DC LIN V_V1 5V 0V -50mV 
-.tran/OP 2ns 20ms
+.tran/OP 2ns 20ms SKIPBP
 .OP 
 .LIB "C:\Users\Tiago\Desktop\EE530\pspice\tcs530\Lab3\Q1\q1.lib"
 .LIB "C:\Users\Tiago\Desktop\EE530\pspice\tcs530\Lab3\Q3\Schematic3.lib"
@@ -41,6 +41,7 @@ V_V1         Vi 0  AC 1
 +PULSE 5 0 0 0 0 0.5m 1m
 M_M3         Vo Vi 0 0 Nmos2           
 M_M4         Vo Vi Vdd Vdd Pmos           
+C_C2         0 Vo  1.941n  
 
 **** RESUMING Schematic3.cir ****
 .INC "Schematic3.als"
@@ -55,6 +56,7 @@ V_V2            V2(+=Vdd -=0 )
 V_V1            V1(+=Vi -=0 )
 M_M3            M3(d=Vo g=Vi s=0 s=0 )
 M_M4            M4(d=Vo g=Vi s=Vdd s=Vdd )
+C_C2            C2(1=0 2=Vo )
 _    _(Vi=Vi)
 _    _(Vo=Vo)
 _    _(Vdd=Vdd)
@@ -67,7 +69,7 @@ _    _(Vdd=Vdd)
 
 .END
 
-**** 05/21/110 13:12:08 ******** NT Evaluation PSpice (July 1997) ************
+**** 05/21/110 15:57:53 ******** NT Evaluation PSpice (July 1997) ************
 
  * C:\Users\Tiago\Desktop\EE530\pspice\tcs530\Lab3\Q3\Schematic3.sch
 
@@ -108,7 +110,7 @@ _    _(Vdd=Vdd)
        XPART    0               0            
 
 
-**** 05/21/110 13:12:08 ******** NT Evaluation PSpice (July 1997) ************
+**** 05/21/110 15:57:53 ******** NT Evaluation PSpice (July 1997) ************
 
  * C:\Users\Tiago\Desktop\EE530\pspice\tcs530\Lab3\Q3\Schematic3.sch
 
@@ -137,73 +139,7 @@ _    _(Vdd=Vdd)
     TOTAL POWER DISSIPATION   2.51E-11  WATTS
 
 
-**** 05/21/110 13:12:08 ******** NT Evaluation PSpice (July 1997) ************
-
- * C:\Users\Tiago\Desktop\EE530\pspice\tcs530\Lab3\Q3\Schematic3.sch
-
-
- ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
-
-
-******************************************************************************
-
-
-
-
-
-
-**** MOSFETS
-
-
-NAME         M_M3        M_M4      
-MODEL        Nmos2       Pmos      
-ID           5.01E-12   -5.01E-12 
-VGS          5.00E+00    0.00E+00 
-VDS          1.64E-09   -5.00E+00 
-VBS          0.00E+00    0.00E+00 
-VTH          1.94E+00   -1.94E+00 
-VDSAT        3.06E+00    0.00E+00 
-GM           1.64E-12    0.00E+00 
-GDS          3.06E-03    0.00E+00 
-GMB          0.00E+00    0.00E+00 
-CBD          0.00E+00    0.00E+00 
-CBS          0.00E+00    0.00E+00 
-CGSOV        0.00E+00    0.00E+00 
-CGDOV        0.00E+00    0.00E+00 
-CGBOV        0.00E+00    0.00E+00 
-CGS          0.00E+00    0.00E+00 
-CGD          0.00E+00    0.00E+00 
-CGB          0.00E+00    0.00E+00 
-**** 05/21/110 13:12:08 ******** NT Evaluation PSpice (July 1997) ************
-
- * C:\Users\Tiago\Desktop\EE530\pspice\tcs530\Lab3\Q3\Schematic3.sch
-
-
- ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
-
-
-******************************************************************************
-
-
-
- NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
-
-
-(   Vi)    5.0000  (   Vo) 1.638E-09  (  Vdd)    5.0000  
-
-
-
-
-    VOLTAGE SOURCE CURRENTS
-    NAME         CURRENT
-
-    V_V2        -5.010E-12
-    V_V1         0.000E+00
-
-    TOTAL POWER DISSIPATION   2.51E-11  WATTS
-
-
-**** 05/21/110 13:12:08 ******** NT Evaluation PSpice (July 1997) ************
+**** 05/21/110 15:57:53 ******** NT Evaluation PSpice (July 1997) ************
 
  * C:\Users\Tiago\Desktop\EE530\pspice\tcs530\Lab3\Q3\Schematic3.sch
 
@@ -243,5 +179,5 @@ CGB          0.00E+00    0.00E+00
 
           JOB CONCLUDED
 
-          TOTAL JOB TIME             .27
+          TOTAL JOB TIME             .37
 
