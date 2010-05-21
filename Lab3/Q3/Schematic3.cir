@@ -1,13 +1,13 @@
 * C:\Users\Tiago\Desktop\EE530\pspice\tcs530\Lab3\Q3\Schematic3.sch
 
 * Schematics Version 8.0 - July 1997
-* Fri May 21 13:10:41 2010
+* Fri May 21 15:57:52 2010
 
 
 
 ** Analysis setup **
 .DC LIN V_V1 5V 0V -50mV 
-.tran/OP 2ns 20ms
+.tran/OP 2ns 20ms SKIPBP
 .OP 
 .LIB "C:\Users\Tiago\Desktop\EE530\pspice\tcs530\Lab3\Q1\q1.lib"
 .LIB "C:\Users\Tiago\Desktop\EE530\pspice\tcs530\Lab3\Q3\Schematic3.lib"

@@ -7,3 +7,4 @@ V_V1         Vi 0  AC 1
 +PULSE 5 0 0 0 0 0.5m 1m
 M_M3         Vo Vi 0 0 Nmos2           
 M_M4         Vo Vi Vdd Vdd Pmos           
+C_C2         0 Vo  1.941n  
