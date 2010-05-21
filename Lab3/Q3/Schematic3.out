@@ -1,0 +1,247 @@
+
+**** 05/21/110 13:12:08 ******** NT Evaluation PSpice (July 1997) ************
+
+ * C:\Users\Tiago\Desktop\EE530\pspice\tcs530\Lab3\Q3\Schematic3.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 8.0 - July 1997
+* Fri May 21 13:10:41 2010
+
+
+
+** Analysis setup **
+.DC LIN V_V1 5V 0V -50mV 
+.tran/OP 2ns 20ms
+.OP 
+.LIB "C:\Users\Tiago\Desktop\EE530\pspice\tcs530\Lab3\Q1\q1.lib"
+.LIB "C:\Users\Tiago\Desktop\EE530\pspice\tcs530\Lab3\Q3\Schematic3.lib"
+
+
+* From [SCHEMATICS NETLIST] section of msim.ini:
+.lib "C:\Users\Tiago\Desktop\EE530\pspice\tcs530\Lab3\Q1\q1.lib"
+.lib "nom.lib"
+
+.INC "Schematic3.net"
+
+**** INCLUDING Schematic3.net ****
+* Schematics Netlist *
+
+
+
+V_V2         Vdd 0 5V
+V_V1         Vi 0  AC 1
++PULSE 5 0 0 0 0 0.5m 1m
+M_M3         Vo Vi 0 0 Nmos2           
+M_M4         Vo Vi Vdd Vdd Pmos           
+
+**** RESUMING Schematic3.cir ****
+.INC "Schematic3.als"
+
+
+
+**** INCLUDING Schematic3.als ****
+* Schematics Aliases *
+
+.ALIASES
+V_V2            V2(+=Vdd -=0 )
+V_V1            V1(+=Vi -=0 )
+M_M3            M3(d=Vo g=Vi s=0 s=0 )
+M_M4            M4(d=Vo g=Vi s=Vdd s=Vdd )
+_    _(Vi=Vi)
+_    _(Vo=Vo)
+_    _(Vdd=Vdd)
+.ENDALIASES
+
+
+**** RESUMING Schematic3.cir ****
+.probe
+
+
+.END
+
+**** 05/21/110 13:12:08 ******** NT Evaluation PSpice (July 1997) ************
+
+ * C:\Users\Tiago\Desktop\EE530\pspice\tcs530\Lab3\Q3\Schematic3.sch
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Nmos2           Pmos            
+               NMOS            PMOS            
+       LEVEL    1               1            
+           L   10.000000E-06   10.000000E-06 
+           W  100.000000E-06  330.000000E-06 
+         VTO    1.941          -1.941        
+          KP  100.000000E-06   30.000000E-06 
+       GAMMA    0               0            
+         PHI     .6              .6          
+      LAMBDA     .01             .01         
+          IS   10.000000E-15   10.000000E-15 
+          JS    0               0            
+          PB     .8              .8          
+        PBSW     .8              .8          
+          CJ    0               0            
+        CJSW    0               0            
+        CGSO    0               0            
+        CGDO    0               0            
+         TOX    0               0            
+          XJ    0               0            
+      DIOMOD    1               1            
+         VFB    0               0            
+          U0    0               0            
+        TEMP    0               0            
+         VDD    0               0            
+       XPART    0               0            
+
+
+**** 05/21/110 13:12:08 ******** NT Evaluation PSpice (July 1997) ************
+
+ * C:\Users\Tiago\Desktop\EE530\pspice\tcs530\Lab3\Q3\Schematic3.sch
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   Vi)    5.0000  (   Vo) 1.638E-09  (  Vdd)    5.0000  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V2        -5.010E-12
+    V_V1         0.000E+00
+
+    TOTAL POWER DISSIPATION   2.51E-11  WATTS
+
+
+**** 05/21/110 13:12:08 ******** NT Evaluation PSpice (July 1997) ************
+
+ * C:\Users\Tiago\Desktop\EE530\pspice\tcs530\Lab3\Q3\Schematic3.sch
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+
+**** MOSFETS
+
+
+NAME         M_M3        M_M4      
+MODEL        Nmos2       Pmos      
+ID           5.01E-12   -5.01E-12 
+VGS          5.00E+00    0.00E+00 
+VDS          1.64E-09   -5.00E+00 
+VBS          0.00E+00    0.00E+00 
+VTH          1.94E+00   -1.94E+00 
+VDSAT        3.06E+00    0.00E+00 
+GM           1.64E-12    0.00E+00 
+GDS          3.06E-03    0.00E+00 
+GMB          0.00E+00    0.00E+00 
+CBD          0.00E+00    0.00E+00 
+CBS          0.00E+00    0.00E+00 
+CGSOV        0.00E+00    0.00E+00 
+CGDOV        0.00E+00    0.00E+00 
+CGBOV        0.00E+00    0.00E+00 
+CGS          0.00E+00    0.00E+00 
+CGD          0.00E+00    0.00E+00 
+CGB          0.00E+00    0.00E+00 
+**** 05/21/110 13:12:08 ******** NT Evaluation PSpice (July 1997) ************
+
+ * C:\Users\Tiago\Desktop\EE530\pspice\tcs530\Lab3\Q3\Schematic3.sch
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   Vi)    5.0000  (   Vo) 1.638E-09  (  Vdd)    5.0000  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V2        -5.010E-12
+    V_V1         0.000E+00
+
+    TOTAL POWER DISSIPATION   2.51E-11  WATTS
+
+
+**** 05/21/110 13:12:08 ******** NT Evaluation PSpice (July 1997) ************
+
+ * C:\Users\Tiago\Desktop\EE530\pspice\tcs530\Lab3\Q3\Schematic3.sch
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+
+**** MOSFETS
+
+
+NAME         M_M3        M_M4      
+MODEL        Nmos2       Pmos      
+ID           5.01E-12   -5.01E-12 
+VGS          5.00E+00    0.00E+00 
+VDS          1.64E-09   -5.00E+00 
+VBS          0.00E+00    0.00E+00 
+VTH          1.94E+00   -1.94E+00 
+VDSAT        3.06E+00    0.00E+00 
+GM           1.64E-12    0.00E+00 
+GDS          3.06E-03    0.00E+00 
+GMB          0.00E+00    0.00E+00 
+CBD          0.00E+00    0.00E+00 
+CBS          0.00E+00    0.00E+00 
+CGSOV        0.00E+00    0.00E+00 
+CGDOV        0.00E+00    0.00E+00 
+CGBOV        0.00E+00    0.00E+00 
+CGS          0.00E+00    0.00E+00 
+CGD          0.00E+00    0.00E+00 
+CGB          0.00E+00    0.00E+00 
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .27
+
