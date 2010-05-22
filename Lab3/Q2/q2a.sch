@@ -1,4 +1,4 @@
-*version 8.0 874834686
+*version 8.0 957771617
 u 58
 V? 4
 R? 5
@@ -9,12 +9,12 @@ I? 2
 @libraries
 @analysis
 .AC 1 3 0
-+0 101
++0 10
 +1 100
 +2 100000k
 .TRAN 1 1 1 0
 +0 20ns
-+1 10ms
++1 100ms
 .LIB C:\Users\Tiago\Desktop\EE530\pspice\tcs530\Lab3\Q2\q2.lib
 @targets
 @attributes
@@ -37,11 +37,11 @@ connectViaLocalLabels 0
 NoStim4ExtIFPortsWarnings 1
 AutoGenStim4ExtIFPorts 1
 @index
-pageloc 1 0 5203 
+pageloc 1 0 5267 
 @status
-c 110:04:14:11:55:57;1273848957
-n 0 110:04:14:11:55:59;1273848959 e 
-s 2832 110:04:14:11:55:59;1273848959 e 
+c 110:04:21:22:25:10;1274491510
+n 0 110:04:21:22:25:11;1274491511 e 
+s 2832 110:04:21:22:25:11;1274491511 e 
 *page 1 0 970 720 iA
 @ports
 port 12 GND_EARTH 310 210 h
@@ -143,8 +143,10 @@ a 1 s 13 0 340 95 hrn 100 PAGECOUNT=1
 a 1 s 13 0 300 95 hrn 100 PAGENO=1
 part 57 nodeMarker 340 130 h
 a 0 s 0 0 0 0 hln 100 PROBEVAR=
+a 0 s 0 0 0 0 hln 100 PROBEVAR=
 a 0 a 0 0 4 22 hlb 100 LABEL=2
 part 56 nodeMarker 160 160 h
+a 0 s 0 0 0 0 hln 100 PROBEVAR=
 a 0 s 0 0 0 0 hln 100 PROBEVAR=
 a 0 a 0 0 4 22 hlb 100 LABEL=1
 @conn
@@ -195,9 +197,6 @@ j 310 210
 j 160 190
 + s 10
 + w 29
-j 250 150
-+ p 26 g
-+ w 32
 j 230 150
 + p 4 2
 + w 32
@@ -210,9 +209,6 @@ j 230 200
 j 230 190
 + s 11
 + w 36
-j 280 130
-+ p 26 d
-+ w 38
 j 340 170
 + p 7 1
 + s 13
@@ -252,9 +248,6 @@ j 280 250
 j 280 240
 + p 51 -
 + w 55
-j 280 170
-+ p 26 s
-+ w 41
 j 310 180
 + p 6 2
 + w 41
@@ -297,6 +290,15 @@ j 160 160
 j 160 160
 + p 56 pin1
 + p 2 +
+j 250 150
++ p 26 g
++ w 32
+j 280 130
++ p 26 d
++ w 38
+j 280 170
++ p 26 s
++ w 41
 @attributes
 a 0 s 0:13 0 0 0 hln 100 PAGETITLE=
 a 0 s 0:13 0 0 0 hln 100 PAGENO=1
