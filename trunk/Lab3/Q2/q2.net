@@ -3,15 +3,15 @@
 
 
 C_Cc1         $N_0001 $N_0002  100n  
-V_V2         VDD 0 10V
 C_Cc2         $N_0003 Vo  100n  
 C_Cs         0 $N_0004  100n  
 R_Rsig         $N_0005 $N_0001  100  
 R_RG         0 $N_0002  1000k  
 R_RD         $N_0003 VDD  3091.2  
-R_RL         0 Vo  100k  
-M_M1         $N_0003 $N_0002 $N_0004 $N_0004 MbreakN3           
-V_Vsig         $N_0005 0  AC 0
-+SIN 0 0.1 1000 0 0 0
-V_V3         0 VSS 10V
 I_I1         $N_0004 VSS DC 0.001941A  
+V_V3         0 VSS 10V
+V_V2         VDD 0 10V
+R_RL         0 Vo  100k  
+V_Vsig         $N_0005 0  AC 1
++SIN 0 0.1 1000 0 0 0
+M_M1         $N_0003 $N_0002 $N_0004 $N_0004 MbreakN3           

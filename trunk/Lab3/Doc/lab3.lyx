@@ -149,7 +149,7 @@ Utilizando o programa Pspice, defimos um transistor MOSFET com os seguintes
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -380,7 +380,7 @@ name "tab:Parâmetros-MOSFET"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -578,7 +578,7 @@ name "fig:Gráfico_q1"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -761,7 +761,7 @@ Para o circuito utilizamos os seguintes dados:
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -1365,7 +1365,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename q2a_voltage.pdf
+	filename biaspointdetait_voltage.pdf
 	scale 25
 
 \end_inset
@@ -1396,7 +1396,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename q2a_current.pdf
+	filename biaspointdetait_current.pdf
 	scale 25
 
 \end_inset
@@ -1432,7 +1432,7 @@ Para o cáculo de
 \end_inset
 
 , temos que :
-\begin_inset Formula $g_{m}=K_{n}\frac{W}{L}\left[(V_{GS}-V_{t})=0,0001*(0-(-10)-1,941)\right]=8,059m\frac{A}{V}$
+\begin_inset Formula $g_{m}=K_{n}\frac{W}{L}\left[(V_{GS}-V_{t})=0,0001*(0-(-3,838)-1,941)\right]=1,897m\frac{A}{V}$
 \end_inset
 
 .E o 
@@ -1445,7 +1445,7 @@ Para o cáculo de
 \noun off
 \color none
 
-\begin_inset Formula $A_{v}=\frac{V_{0}}{V_{sig}}=-g_{m}v_{gs}(R_{D}\parallel ro\parallel R_{L})=-22,28\frac{V}{V}$
+\begin_inset Formula $A_{v}=\frac{V_{0}}{V_{sig}}=-g_{m}v_{gs}(R_{D}\parallel ro\parallel R_{L})=-5,37\frac{V}{V}$
 \end_inset
 
 
@@ -1458,10 +1458,15 @@ Para o cáculo de
 \noun default
 \color inherit
  e 
-\begin_inset Formula $Gm=\frac{R_{G}}{R_{G}-R_{sig}}A_{v}=-22,8$
+\begin_inset Formula $Gm=\frac{R_{G}}{R_{G}-R_{sig}}A_{v}=-5,374$
 \end_inset
 
+.
+\end_layout
 
+\begin_layout Standard
+Conforme o calculado no pspice em valores absolutos, o aumento do circuito
+ foi de -5,8 que comparado a -5,37 é um valor 10% menor em módulo.
 \end_layout
 
 \begin_layout Standard
@@ -1471,8 +1476,9 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
-	filename q2b.pdf
+	filename q2b frq db.pdf
 	scale 40
 
 \end_inset
@@ -1484,15 +1490,11 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Função de transferência
+Função de transferência 
 \end_layout
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 

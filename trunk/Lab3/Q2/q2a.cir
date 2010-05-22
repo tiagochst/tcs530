@@ -1,15 +1,17 @@
 * C:\Users\Tiago\Desktop\EE530\pspice\tcs530\Lab3\Q2\q2a.sch
 
 * Schematics Version 8.0 - July 1997
-* Fri May 21 22:25:11 2010
+* Sat May 22 09:19:50 2010
 
 
 
 ** Analysis setup **
 .ac DEC 10 100 100000k
+.DC LIN V_Vsig 0 100 1 
 .tran/OP 20ns 100ms SKIPBP
 .OP 
 .LIB "C:\Users\Tiago\Desktop\EE530\pspice\tcs530\Lab3\Q2\q2.lib"
+.LIB "C:\Users\Tiago\Desktop\EE530\pspice\tcs530\Lab3\Q2\q2a.lib"
 
 
 * From [SCHEMATICS NETLIST] section of msim.ini:
