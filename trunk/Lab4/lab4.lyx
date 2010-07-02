@@ -131,5 +131,379 @@ end{titlepage}
 Amplificador diferencial com TJB
 \end_layout
 
+\begin_layout Standard
+Projetando o circuito da figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Circuito1"
+
+\end_inset
+
+, um amplificador diferencial,cujo alguns parâmetros são : 
+\end_layout
+
+\begin_layout Itemize
+VCC =10 V
+\end_layout
+
+\begin_layout Itemize
+I1 = 1.941mA
+\end_layout
+
+\begin_layout Itemize
+V5 = 10mV com frequência de 1kHz 
+\end_layout
+
+\begin_layout Standard
+Obtemos da análise do circuito que:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $VCC-VC1=\frac{R1*I1}{2}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Para que a tensão no coletor fique por volta de 5V, ou seja, VC1 = VC2 =
+ 5V:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $R1=R2=5152\,\Omega$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Q1/circuito.pdf
+	lyxscale 30
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Configuração do par diferencial TBJ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Circuito1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Posteriormente realizamos uma análise de polarização, a partir da qual confirmam
+os nossa tensão 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:pol_vol"
+
+\end_inset
+
+ e correntes 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:pol_cur"
+
+\end_inset
+
+ teóricas com as práticas.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Q1/Pol_corrente.pdf
+	lyxscale 20
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Análise de polarização - Corrente
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:pol_cur"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Q1/Pol_Voltagem.pdf
+	lyxscale 20
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Análise de polarização - Voltagem
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:pol_vol"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+De modo a obter o ganho diferencial e não diferencial devemos calcular o
+ valor da transcondutância de Q1 e Q2.
+\end_layout
+
+\begin_layout Standard
+\align center
+Sendo 
+\begin_inset Formula $r_{e}=$
+\end_inset
+
+
+\begin_inset Formula $\frac{V_{T}}{I_{C}}=\frac{1}{g_{m}}$
+\end_inset
+
+, temos 
+\begin_inset Formula $r_{e}=25,76\Omega$
+\end_inset
+
+ e 
+\begin_inset Formula $g_{m}=\frac{0,0039}{\Omega}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Sabemos que o ganho diferencial é dado por:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+A_{d}=\frac{v_{od}}{v_{ed}}=-g_{m}R_{C}\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Logo, 
+\begin_inset Formula $A_{d}=-200$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+O ganho de modo comum é dado por 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+A_{c}=\frac{v_{oc}}{v_{ec}}=-\frac{g_{m}R_{C}}{2}\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Logo, 
+\begin_inset Formula $A_{c}=-100$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+De acordo com a figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Análise-de-transitório"
+
+\end_inset
+
+nosso pico de máximo vale 5,9V e o de mínimo 4,1V.
+\end_layout
+
+\begin_layout Standard
+`Pela teroria:
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\begin_inset Formula $A_{d}*v_{ed}=v_{od}$
+\end_inset
+
+,
+\begin_inset Formula $v_{od}=-200*5m=-1V$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+Logo é esperado é:
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\begin_inset Formula $V_{c1}=V_{CC}-I_{C}R_{C}+v_{od}=4V$
+\end_inset
+
+ e 
+\begin_inset Formula $V_{c1}=V_{CC}-I_{C}R_{C}-v_{od}=6V$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+O que se aproxima do gráfico.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Q1/transient.pdf
+	lyxscale 30
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Análise de transitório 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Análise-de-transitório"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document
