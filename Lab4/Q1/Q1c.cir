@@ -1,7 +1,7 @@
-* C:\Users\Tiago\Desktop\EE530\pspice\tcs530\Lab4\Q1\Q1b.sch
+* C:\Users\Tiago\Desktop\EE530\pspice\tcs530\Lab4\Q1\Q1c.sch
 
 * Schematics Version 8.0 - July 1997
-* Fri Jul 02 17:18:36 2010
+* Fri Jul 02 17:33:19 2010
 
 
 
@@ -14,8 +14,8 @@
 * From [SCHEMATICS NETLIST] section of msim.ini:
 .lib nom.lib
 
-.INC "Q1b.net"
-.INC "Q1b.als"
+.INC "Q1c.net"
+.INC "Q1c.als"
 
 
 .probe
