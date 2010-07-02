@@ -1,0 +1,22 @@
+BIPOLAR JUNCTION TRANSISTORS
+
+
+NAME         Q_Q2        Q_Q1      
+MODEL        Q2N2222     Q2N2222   
+IB           6.17E-06    6.17E-06 
+IC           9.64E-04    9.64E-04 
+VBE          6.43E-01    6.43E-01 
+VBC         -5.03E+00   -5.03E+00 
+VCE          5.68E+00    5.68E+00 
+BETADC       1.56E+02    1.56E+02 
+GM           3.72E-02    3.72E-02 
+RPI          4.66E+03    4.66E+03 
+RX           1.00E+01    1.00E+01 
+RO           8.20E+04    8.20E+04 
+CBE          5.16E-11    5.16E-11 
+CBC          3.64E-12    3.64E-12 
+CJS          0.00E+00    0.00E+00 
+BETAAC       1.73E+02    1.73E+02 
+CBX          0.00E+00    0.00E+00 
+FT           1.07E+08    1.07E+08 
+

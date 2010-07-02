@@ -4,6 +4,54 @@
 \begin_header
 \textclass article
 \begin_preamble
+\usepackage[brazil]{babel}    % dá suporte para os termos na língua portuguesa do Brasil
+\usepackage{url}
+\usepackage{textcomp}
+\usepackage[table]{xcolor}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{graphicx}
+\usepackage{amsmath} 
+\usepackage{wrapfig}
+\numberwithin{table}{section}
+\numberwithin{figure}{section}
+\usepackage{color}
+\usepackage{indentfirst}
+\usepackage{multicol}
+\usepackage{listings}
+\usepackage{bbding}
+ \usepackage{courier}
+ \lstset{
+         basicstyle=\scriptsize \ttfamily, 
+         numbers=left,               
+         numberstyle=\tiny,         
+         %stepnumber=2,              
+         numbersep=5pt,             
+         tabsize=2,                  
+         extendedchars=true,  
+         breaklines=true,       
+         keywordstyle=\color{blue},
+         frame=b,         
+         stringstyle=\color{green}\ttfamily, 
+         showspaces=false,          
+         showtabs=false,             
+         xleftmargin=5pt,
+         framexleftmargin=5pt,
+         framexrightmargin=1pt,
+         framexbottommargin=1pt,
+         language=VHDL,
+     %    fontadjust,
+         %backgroundcolor=\color{lightgray},
+         showstringspaces=false              
+  }
+ \lstloadlanguages{VHDL
+ }
+  \usepackage{caption}
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFont{green}{\color{green}}
+\DeclareCaptionFormat{listing}{\colorbox[cmyk]{0.43, 0.35, 0.35,0.01}{\parbox{\textwidth}{\hspace{15pt}#1#2#3}}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white, singlelinecheck=false, margin=0pt, font={bf,footnotesize}}
+
 % dá suporte para os termos na língua portuguesa do Brasil
 % Lê a codificação de fonte T1 (font encoding default é 0T1).
 \usepackage{ae}\usepackage{aecompl}\usepackage{pslatex}\usepackage{epsfig}\renewcommand{\sfdefault}{lmss}\renewcommand{\ttdefault}{lmtt}\usepackage[table]{xcolor}\usepackage{array}\usepackage{longtable}\usepackage{wrapfig}\numberwithin{table}{section}\numberwithin{figure}{section}\@ifundefined{definecolor}
@@ -586,6 +634,47 @@ Função de transferência
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Examinando a saída do circuito, encontramos:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstinputlisting[label=txt:output,caption=Output]{Q1/output.txt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Nossos dados teóricos eram:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $g_{m}=\frac{0,0039}{\Omega}$
+\end_inset
+
+ e 
+\begin_inset Formula $r_{\pi}=6592$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+O primeiro ficou próximo ao teórico, já o segundo ficou com um valor bem
+ maior, aproximadamente 40% a mais que o teórico.
 \end_layout
 
 \end_body
