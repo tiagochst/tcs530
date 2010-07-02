@@ -1,0 +1,24 @@
+* C:\Users\Tiago\Desktop\EE530\pspice\tcs530\Lab4\Q1\Q1b.sch
+
+* Schematics Version 8.0 - July 1997
+* Fri Jul 02 14:23:49 2010
+
+
+
+** Analysis setup **
+.ac DEC 101 1000 10000K
+.tran 20ns 10ms
+.OP 
+
+
+* From [SCHEMATICS NETLIST] section of msim.ini:
+.lib nom.lib
+
+.INC "Q1b.net"
+.INC "Q1b.als"
+
+
+.probe
+
+
+.END

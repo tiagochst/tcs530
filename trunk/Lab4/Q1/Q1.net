@@ -1,0 +1,13 @@
+* Schematics Netlist *
+
+
+
+V_V6         VCC 0 10V
+V_V5         $N_0001 0  
++SIN 0 10m 1000 0 0 0
+V_V7         0 VEE 10V
+R_R1         VCC $N_0002  5152  
+R_R2         VCC $N_0003  5152  
+Q_Q2         $N_0003 0 $N_0004 Q2N2222
+Q_Q1         $N_0002 $N_0001 $N_0004 Q2N2222
+I_I1         $N_0004 VEE DC 1.941mA  
