@@ -1,6 +1,6 @@
-*version 8.0 31765142
-u 120
-R? 3
+*version 8.0 546270007
+u 129
+R? 5
 V? 9
 I? 3
 Q? 3
@@ -35,10 +35,10 @@ connectViaLocalLabels 0
 NoStim4ExtIFPortsWarnings 1
 AutoGenStim4ExtIFPorts 1
 @index
-pageloc 1 0 4124 
+pageloc 1 0 4411 
 @status
-n 0 110:06:02:17:18:36;1278101916 e 
-s 2832 110:06:02:17:28:52;1278102532 e 
+n 0 110:06:02:17:33:18;1278102798 e 
+s 2832 110:06:02:17:33:19;1278102799 e 
 *page 1 0 970 720 iA
 @ports
 port 37 GND_EARTH 240 230 h
@@ -67,12 +67,17 @@ a 0 sp 0 0 22 37 hln 100 PART=VDC
 a 0 a 0:13 0 0 0 hln 100 PKGREF=V7
 a 1 ap 9 0 34 22 hcn 100 REFDES=V7
 part 43 VSIN 240 200 h
+a 1 u 0 0 0 0 hcn 100 AC=1
 a 0 a 0:13 0 0 0 hln 100 PKGREF=V5
 a 1 ap 9 0 20 10 hcn 100 REFDES=V5
 a 1 u 0 0 0 0 hcn 100 FREQ=1000
 a 1 u 0 0 0 0 hcn 100 VOFF=0
 a 1 u 0 0 0 0 hcn 100 VAMPL=1
-a 1 u 0 0 0 0 hcn 100 AC=1
+part 5 IDC 340 280 h
+a 1 u 13 0 -29 26 hcn 100 DC=1.941mA
+a 0 a 0:13 0 0 0 hln 100 PKGREF=I1
+a 1 ap 9 0 20 10 hcn 100 REFDES=I1
+a 0 sp 11 0 25 25 hln 100 PART=IDC
 part 7 Q2N2222 410 200 H
 a 0 sp 11 0 -30 50 hln 100 PART=Q2N2222
 a 0 s 0:13 0 0 0 hln 100 PKGTYPE=TO-18
@@ -86,11 +91,6 @@ a 0 s 0:13 0 0 0 hln 100 GATE=
 a 0 a 0:13 0 0 0 hln 100 PKGREF=R2
 a 0 ap 9 0 15 0 hln 100 REFDES=R2
 a 0 u 13 0 25 0 hln 100 VALUE=5152
-part 5 IDC 340 280 h
-a 1 u 13 0 -29 26 hcn 100 DC=1.941mA
-a 0 a 0:13 0 0 0 hln 100 PKGREF=I1
-a 1 ap 9 0 20 10 hcn 100 REFDES=I1
-a 0 sp 11 0 25 25 hln 100 PART=IDC
 part 2 R 300 140 d
 a 0 sp 0 0 0 10 hlb 100 PART=R
 a 0 s 0:13 0 0 0 hln 100 PKGTYPE=RC05
@@ -99,11 +99,17 @@ a 0 a 0:13 0 0 0 hln 100 PKGREF=R1
 a 0 ap 9 0 10 30 hln 100 REFDES=R1
 a 0 u 13 0 20 40 hln 100 VALUE=5152
 part 6 Q2N2222 280 200 h
-a 0 sp 11 0 -25 50 hln 100 PART=Q2N2222
 a 0 s 0:13 0 0 0 hln 100 PKGTYPE=TO-18
 a 0 s 0:13 0 0 0 hln 100 GATE=
 a 0 a 0:13 0 0 0 hln 100 PKGREF=Q1
 a 0 ap 9 0 5 5 hln 100 REFDES=Q1
+a 0 sp 11 0 25 25 hln 100 PART=Q2N2222
+part 123 R 360 180 u
+a 0 sp 0 0 0 10 hlb 100 PART=R
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=RC05
+a 0 s 0:13 0 0 0 hln 100 GATE=
+a 0 a 0:13 0 0 0 hln 100 PKGREF=R4
+a 0 ap 9 0 15 0 hln 100 REFDES=R4
 part 1 titleblk 970 720 h
 a 1 s 13 0 350 10 hcn 100 PAGESIZE=A
 a 1 s 13 0 180 60 hcn 100 PAGETITLE=
@@ -129,11 +135,6 @@ w 59
 a 0 up 0:33 0 0 0 hln 100 V=
 s 240 240 240 230 57
 a 0 up 33 0 242 250 hlt 100 V=
-w 88
-a 0 up 0:33 0 0 0 hln 100 V=
-s 390 190 390 180 87
-s 390 180 390 170 89
-a 0 up 33 0 352 140 hlt 100 V=
 w 106
 a 0 up 0:33 0 0 0 hln 100 V=
 s 340 240 340 280 104
@@ -148,12 +149,19 @@ a 0 up 0:33 0 0 0 hln 100 V=
 s 280 200 290 200 95
 s 240 200 260 200 115
 a 0 up 33 0 225 189 hct 100 V=
-s 260 200 280 200 118
+s 260 200 280 200 121
+w 88
+a 0 up 0:33 0 0 0 hln 100 V=
+s 390 190 390 180 87
+s 390 180 390 170 89
+a 0 up 33 0 352 140 hlt 100 V=
+s 360 180 390 180 125
 w 85
 a 0 up 0:33 0 0 0 hln 100 V=
 s 300 190 300 180 84
 s 300 180 300 170 86
 a 0 up 33 0 312 140 hlt 100 V=
+s 320 180 300 180 127
 @junction
 j 390 180
 + p 7 c
@@ -164,9 +172,6 @@ j 410 200
 j 340 320
 + s 47
 + p 5 -
-j 240 240
-+ p 43 -
-+ w 59
 j 240 230
 + s 37
 + w 59
@@ -218,24 +223,15 @@ j 300 140
 j 390 140
 + s 48
 + p 3 1
-j 240 200
-+ p 43 +
-+ w 22
 j 300 220
 + p 6 e
 + w 106
-j 280 200
-+ p 6 b
-+ w 22
 j 300 180
 + p 2 2
 + p 6 c
 j 300 180
 + p 6 c
 + w 85
-j 260 200
-+ p 117 pin1
-+ w 22
 j 300 180
 + p 119 pin1
 + p 2 2
@@ -244,6 +240,24 @@ j 300 180
 + p 6 c
 j 300 180
 + p 119 pin1
++ w 85
+j 240 240
++ p 43 -
++ w 59
+j 280 200
++ p 6 b
++ w 22
+j 240 200
++ p 43 +
++ w 22
+j 260 200
++ p 117 pin1
++ w 22
+j 360 180
++ p 123 1
++ w 88
+j 320 180
++ p 123 2
 + w 85
 @attributes
 a 0 s 0:13 0 0 0 hln 100 PAGETITLE=
