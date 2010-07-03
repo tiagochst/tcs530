@@ -1,0 +1,11 @@
+* Schematics Netlist *
+
+
+
+Q_Q2         v0 vi -VCC Q2N2907A
+Q_Q1         VCC vi v0 Q2N2222
+V_V2         VCC 0 10V
+V_V1         0 -VCC 10V
+R_R1         0 v0  19.41  
+V_V3         vi 0  
++SIN 0 10 1000 0 0 0
