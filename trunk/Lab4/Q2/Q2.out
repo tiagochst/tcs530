@@ -1,5 +1,5 @@
 
-**** 07/03/110 09:01:38 ******** NT Evaluation PSpice (July 1997) ************
+**** 07/03/110 16:23:26 ******** NT Evaluation PSpice (July 1997) ************
 
  * C:\Users\Tiago\Desktop\EE530\pspice\tcs530\Lab4\Q2\Q2.sch
 
@@ -69,7 +69,7 @@ _    _(vi=vi)
 
 .END
 
-**** 07/03/110 09:01:38 ******** NT Evaluation PSpice (July 1997) ************
+**** 07/03/110 16:23:26 ******** NT Evaluation PSpice (July 1997) ************
 
  * C:\Users\Tiago\Desktop\EE530\pspice\tcs530\Lab4\Q2\Q2.sch
 
@@ -107,7 +107,7 @@ _    _(vi=vi)
          XTB    1.5             1.5          
 
 
-**** 07/03/110 09:01:38 ******** NT Evaluation PSpice (July 1997) ************
+**** 07/03/110 16:23:26 ******** NT Evaluation PSpice (July 1997) ************
 
  * C:\Users\Tiago\Desktop\EE530\pspice\tcs530\Lab4\Q2\Q2.sch
 
@@ -137,7 +137,7 @@ _    _(vi=vi)
     TOTAL POWER DISSIPATION   2.31E-10  WATTS
 
 
-**** 07/03/110 09:01:38 ******** NT Evaluation PSpice (July 1997) ************
+**** 07/03/110 16:23:26 ******** NT Evaluation PSpice (July 1997) ************
 
  * C:\Users\Tiago\Desktop\EE530\pspice\tcs530\Lab4\Q2\Q2.sch
 
@@ -175,7 +175,7 @@ CBX          0.00E+00    0.00E+00
 FT           4.27E-04    3.15E-03 
 
 
-**** 07/03/110 09:01:38 ******** NT Evaluation PSpice (July 1997) ************
+**** 07/03/110 16:23:26 ******** NT Evaluation PSpice (July 1997) ************
 
  * C:\Users\Tiago\Desktop\EE530\pspice\tcs530\Lab4\Q2\Q2.sch
 
