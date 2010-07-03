@@ -845,6 +845,39 @@ reference "fig:Corrente-e-voltagem-peri"
 \end_inset
 
 , contendo alguns ciclos de corrente e voltagem na carga.
+ Pela teoria a potência eficaz entregua à carga vale:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+P_{L}=\frac{V_{o}^{2}}{2*R_{L}}\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Logo 
+\begin_inset Formula $P_{L}=2,58W$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Utilizando o gráfico 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:pot_carg"
+
+\end_inset
+
+ obtemos 
+\begin_inset Formula $P_{L}=2,28W$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -856,7 +889,73 @@ reference "fig:IeVbattery"
 
 \end_inset
 
+.Pela teoria a potência eficaz entregua à carga vale:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+P_{S-}=P_{S+}=\frac{V_{o}V_{CC}}{\pi R_{L}}\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A potência eficaz teórica retiradas das cargas vale:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+P_{S-}=P_{S+}=1,64\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+E pelo gráfico 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:pot_bat"
+
+\end_inset
+
+: 
+\begin_inset Formula $P_{S-}=P_{S+}=1,54W$
+\end_inset
+
 .
+\begin_inset Formula $P_{S}=3,08W$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Logo nossa eficiência teórica vale:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $\eta=\frac{P_{L}}{P_{S}}=78,5\%$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Pelo gráfico 
+\begin_inset Formula $\eta=\frac{P_{L}}{P_{S}}=74,0\%$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Logo, existiu uma perda de 5% de eficiência se compararmos a parte teórica
+ com a projetada.
 \end_layout
 
 \begin_layout Standard
@@ -946,6 +1045,98 @@ name "fig:IeVbattery"
 \end_layout
 
 \begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Q2/Q2_pot_carg.pdf
+	lyxscale 40
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Valor eficaz da potência entregua à carga 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:pot_carg"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Q2/Q2_pot_carg.pdf
+	lyxscale 50
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Valor eficaz da potência retirada das baterias
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:pot_bat"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
