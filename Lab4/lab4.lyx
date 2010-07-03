@@ -238,7 +238,7 @@ status open
 \begin_inset Graphics
 	filename Q1/circuito.pdf
 	lyxscale 30
-	scale 50
+	scale 35
 
 \end_inset
 
@@ -290,16 +290,23 @@ reference "fig:pol_cur"
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
 
 \begin_layout Plain Layout
-\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align left
 \begin_inset Graphics
 	filename Q1/Pol_corrente.pdf
 	lyxscale 20
-	scale 40
+	scale 30
 
 \end_inset
 
@@ -325,6 +332,10 @@ name "fig:pol_cur"
 
 \end_layout
 
+\begin_layout Plain Layout
+
+\end_layout
+
 \end_inset
 
 
@@ -334,11 +345,10 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-\align center
 \begin_inset Graphics
 	filename Q1/Pol_Voltagem.pdf
 	lyxscale 20
-	scale 40
+	scale 30
 
 \end_inset
 
@@ -353,6 +363,11 @@ Análise de polarização - Voltagem
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:pol_vol"
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -677,8 +692,49 @@ O primeiro ficou próximo ao teórico, já o segundo ficou com um valor bem
  maior, aproximadamente 40% a mais que o teórico.
 \end_layout
 
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Estágio de saída classe B
+\end_layout
+
+\begin_layout Standard
+Uma função importante do estágio de saída de um amplificador é fazer o acomplame
+nto com uma resistência de saída baixa, de maneira que o amplificador possa
+ fornecer o sinal de saída para a carga sem queda no ganho.Além disso, uma
+ das grandes dificuldades de um estágio de saída é que ele forneça uma quantidad
+e de potência exigida pela carga de modo eficiente.
+\end_layout
+
+\begin_layout Standard
+Para um estudo mais aprofundado, projetamos o circuito ampliﬁcador classe
+ B da figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Circuito-amplificador-classe"
+
+\end_inset
+
+ na qual o resistor de carga vale 
+\begin_inset Formula $19,41\Omega$
+\end_inset
+
+ e a fonte de entrada é uma fonte senoidal de amplitude 10V e frequência
+ de 1 kHz.
 \end_layout
 
 \begin_layout Standard
@@ -692,7 +748,7 @@ status open
 \begin_inset Graphics
 	filename Q2/Schematics.pdf
 	lyxscale 40
-	scale 40
+	scale 30
 
 \end_inset
 
@@ -703,8 +759,10 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Circuito amplificador classe B
-\end_layout
+Circuito amplificador classe B 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Circuito-amplificador-classe"
 
 \end_inset
 
@@ -714,6 +772,26 @@ Circuito amplificador classe B
 \end_inset
 
 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Pode-se ter a característica de transferência do estágio classe B ao realizar
+ uma análise da tensão na saída e na entrada, o que pode ser visto no gráfico
+ da figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Análise-DC-sweep"
+
+\end_inset
+
+.
+ Vale resaltar que existe uma faixa de vi, nas proximidades de zero, denominada
+ faixa morte, em que os dois transistores estão em corte e v0 vale 0.
 \end_layout
 
 \begin_layout Standard
@@ -727,7 +805,7 @@ status open
 \begin_inset Graphics
 	filename Q2/Q2_saida_entrada.pdf
 	lyxscale 40
-	scale 40
+	scale 35
 
 \end_inset
 
@@ -738,7 +816,14 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Análise DC sweep
+Análise DC sweep 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Análise-DC-sweep"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -752,17 +837,46 @@ Análise DC sweep
 \end_layout
 
 \begin_layout Standard
+Realizando uma análise de transitório, obtemos o gráfico da figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Corrente-e-voltagem-peri"
+
+\end_inset
+
+, contendo alguns ciclos de corrente e voltagem na carga.
+\end_layout
+
+\begin_layout Standard
+Posteriromente, uma análise de transitório foi feita nas baterias, cujo
+ resultado pode ser visto na figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:IeVbattery"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
 status open
 
 \begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Q2/Q2_volt_cur.pdf
 	lyxscale 40
-	scale 40
+	scale 30
 
 \end_inset
 
@@ -773,6 +887,13 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
+Corrente e voltagem na carga 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Corrente-e-voltagem-peri"
+
+\end_inset
+
 
 \end_layout
 
@@ -782,6 +903,54 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Q2/Q2_baterias.pdf
+	lyxscale 50
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Corrente e voltagem nas baterias 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:IeVbattery"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
