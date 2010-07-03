@@ -1,0 +1,212 @@
+
+**** 07/03/110 09:01:38 ******** NT Evaluation PSpice (July 1997) ************
+
+ * C:\Users\Tiago\Desktop\EE530\pspice\tcs530\Lab4\Q2\Q2.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 8.0 - July 1997
+* Sat Jul 03 09:01:38 2010
+
+
+
+** Analysis setup **
+.DC LIN V_V3 -10 10 0.1 
+.tran 20ns 10ms
+.OP 
+
+
+* From [SCHEMATICS NETLIST] section of msim.ini:
+.lib nom.lib
+
+.INC "Q2.net"
+
+**** INCLUDING Q2.net ****
+* Schematics Netlist *
+
+
+
+Q_Q2         v0 vi -VCC Q2N2907A
+Q_Q1         VCC vi v0 Q2N2222
+V_V2         VCC 0 10V
+V_V1         0 -VCC 10V
+R_R1         0 v0  19.41  
+V_V3         vi 0  
++SIN 0 10 1000 0 0 0
+
+**** RESUMING Q2.cir ****
+.INC "Q2.als"
+
+
+
+**** INCLUDING Q2.als ****
+* Schematics Aliases *
+
+.ALIASES
+Q_Q2            Q2(c=v0 b=vi e=-VCC )
+Q_Q1            Q1(c=VCC b=vi e=v0 )
+V_V2            V2(+=VCC -=0 )
+V_V1            V1(+=0 -=-VCC )
+R_R1            R1(1=0 2=v0 )
+V_V3            V3(+=vi -=0 )
+_    _(v0=v0)
+_    _(VCC=VCC)
+_    _(-VCC=-VCC)
+_    _(vi=vi)
+.ENDALIASES
+
+
+**** RESUMING Q2.cir ****
+.probe
+
+
+.END
+
+**** 07/03/110 09:01:38 ******** NT Evaluation PSpice (July 1997) ************
+
+ * C:\Users\Tiago\Desktop\EE530\pspice\tcs530\Lab4\Q2\Q2.sch
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Q2N2907A        Q2N2222         
+               PNP             NPN             
+          IS  650.600000E-18   14.340000E-15 
+          BF  231.7           255.9          
+          NF    1               1            
+         VAF  115.7            74.03         
+         IKF    1.079            .2847       
+         ISE   54.810000E-15   14.340000E-15 
+          NE    1.829           1.307        
+          BR    3.563           6.092        
+          NR    1               1            
+          RB   10              10            
+          RC     .715           1            
+         CJE   19.820000E-12   22.010000E-12 
+         MJE     .3357           .377        
+         CJC   14.760000E-12    7.306000E-12 
+         MJC     .5383           .3416       
+          TF  603.700000E-12  411.100000E-12 
+         XTF    1.7             3            
+         VTF    5               1.7          
+         ITF     .65             .6          
+          TR  111.300000E-09   46.910000E-09 
+         XTB    1.5             1.5          
+
+
+**** 07/03/110 09:01:38 ******** NT Evaluation PSpice (July 1997) ************
+
+ * C:\Users\Tiago\Desktop\EE530\pspice\tcs530\Lab4\Q2\Q2.sch
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   v0) 26.52E-12  (   vi)    0.0000  (  VCC)   10.0000  ( -VCC)  -10.0000  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V2        -1.301E-11
+    V_V1        -1.010E-11
+    V_V3         1.546E-12
+
+    TOTAL POWER DISSIPATION   2.31E-10  WATTS
+
+
+**** 07/03/110 09:01:38 ******** NT Evaluation PSpice (July 1997) ************
+
+ * C:\Users\Tiago\Desktop\EE530\pspice\tcs530\Lab4\Q2\Q2.sch
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+
+**** BIPOLAR JUNCTION TRANSISTORS
+
+
+NAME         Q_Q2        Q_Q1      
+MODEL        Q2N2907A    Q2N2222   
+IB           9.80E-14   -1.64E-12 
+IC           1.00E-11    1.30E-11 
+VBE          1.00E+01   -2.65E-11 
+VBC         -2.65E-11   -1.00E+01 
+VCE          1.00E+01    1.00E+01 
+BETADC       1.02E+02   -7.91E+00 
+GM           6.13E-14    4.94E-13 
+RPI          2.32E+14    2.32E+12 
+RX           1.00E+01    1.00E+01 
+RO           1.07E+12    7.87E+11 
+CBE          8.11E-12    2.20E-11 
+CBC          1.48E-11    2.94E-12 
+CJS          0.00E+00    0.00E+00 
+BETAAC       1.42E+01    1.15E+00 
+CBX          0.00E+00    0.00E+00 
+FT           4.27E-04    3.15E-03 
+
+
+**** 07/03/110 09:01:38 ******** NT Evaluation PSpice (July 1997) ************
+
+ * C:\Users\Tiago\Desktop\EE530\pspice\tcs530\Lab4\Q2\Q2.sch
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   v0) 26.52E-12  (   vi)    0.0000  (  VCC)   10.0000  ( -VCC)  -10.0000  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V2        -1.301E-11
+    V_V1        -1.010E-11
+    V_V3         1.546E-12
+
+    TOTAL POWER DISSIPATION   2.31E-10  WATTS
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .19
+
