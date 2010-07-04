@@ -1,5 +1,5 @@
 
-**** 07/02/110 17:28:52 ******** NT Evaluation PSpice (July 1997) ************
+**** 07/04/110 16:17:21 ******** NT Evaluation PSpice (July 1997) ************
 
  * C:\Users\Tiago\Desktop\EE530\pspice\tcs530\Lab4\Q1\Q1b.sch
 
@@ -13,7 +13,7 @@
 
 
 * Schematics Version 8.0 - July 1997
-* Fri Jul 02 17:18:36 2010
+* Sun Jul 04 16:17:21 2010
 
 
 
@@ -35,13 +35,13 @@
 
 V_V6         VCC 0 10V
 V_V7         0 VEE 10V
-V_V5         $N_0001 0  AC 1
+Q_Q2         $N_0001 0 $N_0002 Q2N2222
+R_R2         VCC $N_0001  5152  
+I_I1         $N_0002 VEE DC 1.941mA  
+R_R1         VCC $N_0003  5152  
+Q_Q1         $N_0003 $N_0004 $N_0002 Q2N2222
+V_V5         $N_0004 0 DC 0 AC 1
 +SIN 0 1 1000 0 0 0
-Q_Q2         $N_0002 0 $N_0003 Q2N2222
-R_R2         VCC $N_0002  5152  
-I_I1         $N_0003 VEE DC 1.941mA  
-R_R1         VCC $N_0004  5152  
-Q_Q1         $N_0004 $N_0001 $N_0003 Q2N2222
 
 **** RESUMING Q1b.cir ****
 .INC "Q1b.als"
@@ -54,12 +54,12 @@ Q_Q1         $N_0004 $N_0001 $N_0003 Q2N2222
 .ALIASES
 V_V6            V6(+=VCC -=0 )
 V_V7            V7(+=0 -=VEE )
-V_V5            V5(+=$N_0001 -=0 )
-Q_Q2            Q2(c=$N_0002 b=0 e=$N_0003 )
-R_R2            R2(1=VCC 2=$N_0002 )
-I_I1            I1(+=$N_0003 -=VEE )
-R_R1            R1(1=VCC 2=$N_0004 )
-Q_Q1            Q1(c=$N_0004 b=$N_0001 e=$N_0003 )
+Q_Q2            Q2(c=$N_0001 b=0 e=$N_0002 )
+R_R2            R2(1=VCC 2=$N_0001 )
+I_I1            I1(+=$N_0002 -=VEE )
+R_R1            R1(1=VCC 2=$N_0003 )
+Q_Q1            Q1(c=$N_0003 b=$N_0004 e=$N_0002 )
+V_V5            V5(+=$N_0004 -=0 )
 _    _(VEE=VEE)
 _    _(VCC=VCC)
 .ENDALIASES
@@ -71,7 +71,7 @@ _    _(VCC=VCC)
 
 .END
 
-**** 07/02/110 17:28:52 ******** NT Evaluation PSpice (July 1997) ************
+**** 07/04/110 16:17:21 ******** NT Evaluation PSpice (July 1997) ************
 
  * C:\Users\Tiago\Desktop\EE530\pspice\tcs530\Lab4\Q1\Q1b.sch
 
@@ -109,7 +109,7 @@ _    _(VCC=VCC)
          XTB    1.5          
 
 
-**** 07/02/110 17:28:52 ******** NT Evaluation PSpice (July 1997) ************
+**** 07/04/110 16:17:21 ******** NT Evaluation PSpice (July 1997) ************
 
  * C:\Users\Tiago\Desktop\EE530\pspice\tcs530\Lab4\Q1\Q1b.sch
 
@@ -124,11 +124,11 @@ _    _(VCC=VCC)
  NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
 
 
-(  VCC)   10.0000  (  VEE)  -10.0000  ($N_0001)    0.0000                       
+(  VCC)   10.0000  (  VEE)  -10.0000  ($N_0001)    5.0318                       
 
-($N_0002)    5.0318                   ($N_0003)    -.6433                       
+($N_0002)    -.6433                   ($N_0003)    5.0318                       
 
-($N_0004)    5.0318                   
+($N_0004)    0.0000                   
 
 
 
@@ -143,7 +143,7 @@ _    _(VCC=VCC)
     TOTAL POWER DISSIPATION   3.87E-02  WATTS
 
 
-**** 07/02/110 17:28:52 ******** NT Evaluation PSpice (July 1997) ************
+**** 07/04/110 16:17:21 ******** NT Evaluation PSpice (July 1997) ************
 
  * C:\Users\Tiago\Desktop\EE530\pspice\tcs530\Lab4\Q1\Q1b.sch
 
@@ -181,7 +181,7 @@ CBX          0.00E+00    0.00E+00
 FT           1.07E+08    1.07E+08 
 
 
-**** 07/02/110 17:28:52 ******** NT Evaluation PSpice (July 1997) ************
+**** 07/04/110 16:17:21 ******** NT Evaluation PSpice (July 1997) ************
 
  * C:\Users\Tiago\Desktop\EE530\pspice\tcs530\Lab4\Q1\Q1b.sch
 
@@ -196,11 +196,11 @@ FT           1.07E+08    1.07E+08
  NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
 
 
-(  VCC)   10.0000  (  VEE)  -10.0000  ($N_0001)    0.0000                       
+(  VCC)   10.0000  (  VEE)  -10.0000  ($N_0001)    5.0318                       
 
-($N_0002)    5.0318                   ($N_0003)    -.6433                       
+($N_0002)    -.6433                   ($N_0003)    5.0318                       
 
-($N_0004)    5.0318                   
+($N_0004)    0.0000                   
 
 
 
@@ -218,5 +218,5 @@ FT           1.07E+08    1.07E+08
 
           JOB CONCLUDED
 
-          TOTAL JOB TIME             .19
+          TOTAL JOB TIME             .22
 
